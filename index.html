@@ -1,15 +1,125 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: sedona</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: sedona</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header__nav-wrap">
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li class="main-nav__item"><a href="#">Карта штата</a></li>
+        <li class="main-nav__item"><a href="#">Информация</a></li>
+        <li class="main-nav__item"><a href="#">Фото и видео</a></li>
+        <li class="main-nav__item"><a href="#">Гостиницы</a></li>
+      </ul>
+      <a href="" class="main-nav__toggle main-nav__toggle--close"></a>
+      <div class="page-header__logo-wrap">
+        <a href="/" class="page-header__logo-link">
+          <img src="img/logo.svg" alt="Sedona">
+        </a>
+      </div>
+      <a href="" class="main-nav__toggle main-nav__toggle--open"></a>
+    </nav>
+  </div>
+</header>
+<section class="promo-sedona">
+  <div class="promo-sedona__inner">
+    <div class="promo-sedona__about">
+      <div class="promo-sedona__about--img">
+        <img src="img/sedona.jpg" alt="Sedona"/>
+      </div>
+      <div class="promo-sedona__about--header"><h1>Седона - небольшой говородок в Аризоне, заслуживающий большего!</h1></div>
+    </div>
+    <div class="reasons">
+      <div class="reasons--header"><p>Рассмотрим 5 причин, по которым Седона лучше, чем Гранд Каньон!</p></div>
+      <div class="reason-active">
+        <div class="reason--header">
+          <h2>Настоящий городок</h2>
+        </div>
+        <div class="reason--number">№ 1</div>
+        <div class="reason--descr"><p>СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p></div>
+      </div>
+      <div class="reason-info">
+        <div class="reason-info--img"><img src="#" alt="Настоящий городок Седона"/></div>
+        <div class="reason-info__item">
+          <div class="reason-info__item--icon reason-info__item--icon-house"></div>
+          <div class="reason-info__item--header">Жилье</div>
+          <div class="reason-info__item--descr">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
+        </div>
+        <div class="reason-info__item">
+          <div class="reason-info__item--icon reason-info__item--icon-gift"></div>
+          <div class="reason-info__item--header">Сувениры</div>
+          <div class="reason-info__item--descr">Не только китайского, но и местного производства!</div>
+        </div>
+        <div class="reason-info__item">
+          <div class="reason-info__item--icon reason-info__item--food"></div>
+          <div class="reason-info__item--header">Еда</div>
+          <div class="reason-info__item--descr">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</div>
+        </div>
+      </div>
+      <div class="reason-active">
+        <div class="reason--header">
+          <h2>ТАМ ЕСТЬ Мост дьявола</h2>
+        </div>
+        <div class="reason--number">№ 2</div>
+        <div class="reason--descr"><p>Да, по нему можно пройти! Если конечно вы осмелитесь</p></div>
+      </div>
+      <div class="reason-info">
+        <div class="reason-info--img"><img src="#" alt="Мост дьявола в Седоне"/></div>
+      </div>
+      <div class="reason">
+        <div class="reason--header">
+          <h2>Небольшая площадь</h2>
+        </div>
+        <div class="reason--number">№ 3</div>
+        <div class="reason--descr"><p>ВСЕ достопримечательности находятся очень близко</p></div>
+      </div>
+      <div class="reason">
+        <div class="reason--header">
+          <h2>Красивая дорога</h2>
+        </div>
+        <div class="reason--number">№ 4</div>
+        <div class="reason--descr"><p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p></div>
+      </div>
+      <div class="reason">
+        <div class="reason--header">
+          <h2>Мало туристов</h2>
+        </div>
+        <div class="reason--number">№ 5</div>
+        <div class="reason--descr"><p>Большинство едет в гранд каньон и толпится там</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hotel">
+  <div class="hotel--header">Заинтересовались?</div>
+  <div class="hotel-descr">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</div>
+  <div class="hotel-btn"><a href="#">Найти гостиницу</a></div>
+</section>
+<section class="map">
+  <div class="map--img"><img src="img/map.ipg" alt="Карта Седоны"/></div>
+</section>
+<footer class="page-footer">
+<div class="page-footer__inner">
+  <div class="page-footer__social">
+    <p class="page-footer__social-header">#VISITSEDONA</p>
+    <ul class="social-links">
+      <li><a class="social-links__item-tw" href="#">Мы в Twitter</a></li>
+      <li><a class="social-links__item-fb" href="#">Мы на Facebook</a></li>
+      <li><a class="social-links__item-yt" href="#">Мы на Youtube</a></li>
+    </ul>
+  </div>
+  <div class="page-footer__develop">
+    <p class="page-footer__develop--text">Разработано</p>
+    <a class="page-footer__develop--icon" href="#"></a>
+  </div>
+</div>
+</footer>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p>
+<!-- <script src="js/script.js"></script> -->
 
-    <!-- <script src="js/script.js"></script> -->
-
-  </body>
+</body>
 </html>
