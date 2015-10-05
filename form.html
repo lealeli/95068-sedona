@@ -25,182 +25,177 @@
   </div>
 </header>
 
-
-<section class="form-header">
-  <div class="form-header__img">
-    <img src="img/sedona_inner.jpg" alt="Sedona"/>
-    <img src="img/sedona_text.svg" alt="Sedona"/></div>
-  <h1 class="form-header__title">Оставьте свой отзыв</h1>
-  <div class="form-header__descr">
-    <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-  </div>
-</section>
-
-
-<form class="form" action="/echo" method="post" enctype="multiple/form-data">
-  <fieldset class="form__fieldset">
-    <legend>Представьтесь, пожалуйта:</legend>
-    <label class="form__name">Фамилия: <span class="form__required">*</span>
-      <input type="text" name="surname" placeholder="Иванов" required>
-    </label>
-    <label class="form__name">Имя: <span class="form__required">*</span>
-      <input type="text" name="name" placeholder="Петр" required>
-    </label>
-    <label class="form__name">Отчество:
-      <input type="text" name="patronymic" placeholder="Александрович">
-    </label>
-  </fieldset>
-
-
-  <fieldset class="form__fieldset">
-    <legend>Ваше общее впечатление:</legend>
-      <label class="form__radio">
-        <input type="radio" name="feeling"  checked>
-        Скорее положительно
-      </label>
-      <label class="form__radio">
-        <input type="radio" name="feeling">
-        Скорее отрицательно
-      </label>
-  </fieldset>
-
-
-  <fieldset class="form__item">
-    <legend>Даты вашей поездки:</legend>
-    <label class="form__data">Дата приезда: <span class="form__required">*</span>
-    <input type="date" name="date-coming" required>
-    </label>
-    <label>Длительность пребывания: <span class="form__required">*</span>
-      <div class="form__number-day">
-        <span class="form__number-day-item form__number-day-item--minus"></span>
-        <input type="number" name="number-day" required>
-        <span class="form__number-day-item">дн.</span>
-        <span class="form__number-day-item form__number-day-item--plus"></span>
-      </div>
-    </label>
-    <label class="form__data">Дата отъезда: <span class="form__required">*</span>
-      <input type="date" name="date-leave" required>
-    </label>
-  </fieldset>
-
-
-  <fieldset class="form__item">
-    <legend>Кол-во путешественников:</legend>
-    <label class="form__number">Количество путешественников: <span class="form__required">*</span>
-      <div class="form__number-day">
-        <span class="form__number-day-item form__number-day-item--minus"></span>
-        <input type="number" name="number-day" required>
-        <span class="form__number-day-item">дн.</span>
-        <span class="form__number-day-item form__number-day-item--plus"></span>
-      </div>
-    </label>
-    <ul class="form__name-list">
-      <li>
-        <div class="form__item--name">
-          <label class="form__name">Фамилия: <span class="form__required">*</span>
-            <input type="text" name="surname" placeholder="Иванов" required>
-          </label>
-          <label class="form__name">Имя: <span class="form__required">*</span>
-            <input type="text" name="name" placeholder="Петр" required>
-          </label>
-          <label class="form__name">Отчество:
-            <input type="text" name="patronymic" placeholder="Александрович">
-          </label>
-        </div>
-      </li>
-      <li>
-        <div class="form__item--name">
-          <label class="form__name">Фамилия: <span class="form__required">*</span>
-            <input type="text" name="surname" placeholder="Иванов" required>
-          </label>
-          <label class="form__name">Имя: <span class="form__required">*</span>
-            <input type="text" name="name" placeholder="Петр" required>
-          </label>
-          <label class="form__name">Отчество:
-            <input type="text" name="patronymic" placeholder="Александрович">
-          </label>
-        </div>
-      </li>
-    </ul>
-  </fieldset>
-
-
-  <fieldset class="form__item">
-    <legend>Посещенные достопримечательности:</legend>
-    <label class="form__checkbox">
-      <input type="checkbox" name="showplace1" checked>Мост Дьявола
-    </label>
-    <label class="form__checkbox">
-      <input type="checkbox" name="showplace2">Слайд-парк
-    </label>
-    <label class="form__checkbox">
-      <input type="checkbox" name="showplace3" checked>Гора-Колокол
-    </label>
-    <label class="form__checkbox">
-      <input type="checkbox" name="showplace4" checked>Красные скалы
-    </label>
-  </fieldset>
-
-
-  <fieldset class="form__item">
-    <legend>Загрузите фотографии:</legend>
-    <input type="file" value="Выбрать фотографии" multiple>
-    <div class="form__photo-previews">
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
-      <div class="form__photo-preview">
-        <img src="http://placehold.it/70x70" alt=""/>
-        <div class="form__photo-preview-delete"></div>
-      </div>
+<main class="content">
+  <header class="form-header">
+    <div class="form-header__img">
+      <img src="img/sedona_text.svg" alt="Sedona"/></div>
+    <h1 class="form-header__title">Оставьте свой отзыв</h1>
+    <div class="form-header__descr">
+      <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div>
-  </fieldset>
+  </header>
 
 
-  <input type="submit" value="Отправить отзыв" class="btn btn--feedback">
-</form>
+  <form class="form" action="/echo" method="post" enctype="multiple/form-data">
+    <fieldset class="form__fieldset">
+      <legend>Представьтесь, пожалуйта:</legend>
+      <label class="field-text">Фамилия: <span class="form__required">*</span>
+        <input type="text" name="surname" placeholder="Иванов" required>
+      </label>
+      <label class="field-text">Имя: <span class="form__required">*</span>
+        <input type="text" name="name" placeholder="Петр" required>
+      </label>
+      <label class="field-text">Отчество:
+        <input type="text" name="patronymic" placeholder="Александрович">
+      </label>
+    </fieldset>
 
 
-<div class="feedback-modal feedback-modal--failure">
-  <strong class="feedback-modal__title">Что-то пошло не так!</strong>
-  <p class="feedback-modal__descr">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-  <button class="btn btn--failure" type="button">Ок</button>
-</div>
+    <fieldset class="form__fieldset">
+      <legend>Ваше общее впечатление:</legend>
+        <label class="field-radio">
+          <input type="radio" name="feeling"  checked>
+          Скорее положительно
+        </label>
+        <label class="field-radio">
+          <input type="radio" name="feeling">
+          Скорее отрицательно
+        </label>
+    </fieldset>
 
 
-<div class="feedback-modal feedback-modal--success">
-  <strong class="feedback-modal__title">Ваш отзыв отправлен!</strong>
-  <p class="feedback-modal__descr">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-  <div class="feedback-modal__button-success">
-    <button class="btn btn--success" type="button">Закрыть окно</button>
+    <fieldset class="form__item">
+      <legend>Даты вашей поездки:</legend>
+      <label class="field-text">Дата приезда: <span class="form__required">*</span>
+      <input type="date" name="date-coming" required>
+      </label>
+      <label class="field-num">Длительность пребывания: <span class="form__required">*</span>
+        <span class="field-num__item field-num__item--minus"></span>
+        <input type="number" name="number-day" required>
+        <span class="field-num__item">дн.</span>
+        <span class="field-num__item field-num__item--plus"></span>
+      </label>
+      <label class="field-text">Дата отъезда: <span class="form__required">*</span>
+        <input type="date" name="date-leave" required>
+      </label>
+    </fieldset>
+
+
+    <fieldset class="form__item">
+      <legend>Кол-во путешественников:</legend>
+      <label class="field-num">Количество путешественников: <span class="form__required">*</span>
+        <span class="field-num__item field-num__item--minus"></span>
+        <input type="number" name="number-day" required>
+        <span class="field-num__item">дн.</span>
+        <span class="field-num__item field-num__item--plus"></span>
+      </label>
+      <ul class="form__traveler-list">
+        <li>
+          <div class="form__traveler">
+            <label class="field-text">Фамилия: <span class="form__required">*</span>
+              <input type="text" name="surname" placeholder="Иванов" required>
+            </label>
+            <label class="field-text">Имя: <span class="form__required">*</span>
+              <input type="text" name="name" placeholder="Петр" required>
+            </label>
+            <label class="field-text">Отчество:
+              <input type="text" name="patronymic" placeholder="Александрович">
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="form__traveler">
+            <label class="field-text">Фамилия: <span class="form__required">*</span>
+              <input type="text" name="surname" placeholder="Иванов" required>
+            </label>
+            <label class="field-text">Имя: <span class="form__required">*</span>
+              <input type="text" name="name" placeholder="Петр" required>
+            </label>
+            <label class="field-text">Отчество:
+              <input type="text" name="patronymic" placeholder="Александрович">
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+
+    <fieldset class="form__item">
+      <legend>Посещенные достопримечательности:</legend>
+      <label class="field-checkbox">
+        <input type="checkbox" name="showplace1" checked>Мост Дьявола
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox" name="showplace2">Слайд-парк
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox" name="showplace3" checked>Гора-Колокол
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox" name="showplace4" checked>Красные скалы
+      </label>
+    </fieldset>
+
+
+    <fieldset class="form__item">
+      <legend>Загрузите фотографии:</legend>
+      <input type="file" value="Выбрать фотографии" multiple>
+      <div class="form__photo-previews">
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+        <div class="form__photo-preview">
+          <img src="http://placehold.it/70x70" alt=""/>
+          <div class="form__photo-preview-delete"></div>
+        </div>
+      </div>
+    </fieldset>
+
+
+    <input type="submit" value="Отправить отзыв" class="btn btn--feedback">
+  </form>
+
+
+  <div class="modal modal--failure">
+    <strong class="feedback-modal__title">Что-то пошло не так!</strong>
+    <p class="feedback-modal__descr">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="btn btn--failure" type="button">Ок</button>
   </div>
-</div>
 
+
+  <div class="modal modal--success">
+    <strong class="feedback-modal__title">Ваш отзыв отправлен!</strong>
+    <p class="feedback-modal__descr">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <div class="feedback-modal__button-success">
+      <button class="btn btn--success" type="button">Закрыть окно</button>
+    </div>
+  </div>
+</main>
 
 <footer class="page-footer">
   <div class="page-footer__inner">

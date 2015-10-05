@@ -1,0 +1,46 @@
+.promo-sedona {
+
+  &__inner {
+  }
+
+  &__about {
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 160px solid $bg-color-main;
+      border-right: 160px solid $bg-color-main;
+      border-top: 16px solid $text-color-secondary;
+    }
+  }
+
+  &__about-img {
+    position: relative;
+    top: -14px;
+    width: 100%;
+    height: 390px;
+    background: #ffffff url('../img/bg-index.jpg') no-repeat 0 0;
+    margin-bottom: 22px;
+
+    img {
+      position: absolute;
+      top: 47px;
+      left: 20px;
+    }
+  }
+
+  &__about-header {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  &__about-title{
+    margin-bottom: 33px;
+  }
+
+  &__about-text{
+    text-align: center;
+    line-height: 1.8em;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,61 @@
+.page-footer {
+
+  &__inner {
+  }
+
+  &__social {
+  }
+
+  &__search-link {
+    display: block;
+    font-size: $html-text-size*2.1;
+    line-height: 26px;
+    color: $text-color-base;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 36px;
+  }
+}
+
+.social-links {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn-social {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  margin-right: 3px;
+  background-color: $bg-color-main;
+
+  &--item-tw{
+    background: $bg-color-main url('../img/icon-social.png') no-repeat 12px 50%;
+  }
+
+  &--item-fb{
+    background: $bg-color-main url('../img/icon-social.png') no-repeat 50% 50%;
+  }
+
+  &--item-yt{
+    background: $bg-color-main url('../img/icon-social.png') no-repeat -91px 50%;
+  }
+}
+
+.page-footer__develop {
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+.page-footer__develop-icon {
+  display: inline-block;
+  vertical-align: middle;
+  color: $text-color-base;
+  text-decoration: none;
+  background: $text-color-secondary url('../img/icon-develop.png') no-repeat top right;
+  height: 34px;
+  padding-right: 38px;
+  line-height: 34px;
+}
