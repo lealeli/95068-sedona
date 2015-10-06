@@ -9,8 +9,12 @@ $blue-dark: #678fa8;
 $blue-light: #9ac2db;
 $gray: #eeeeee;
 $gray-dark: #d6d6d6;
+$gray-darker: #b8b8b8;
+$gray-light: #e5e5e5;
+$gray-lighter: #f2f2f2;
 $white: #ffffff;
 $black: #000000;
+$red: #ff0000;
 
 
 $bg-color-base: $white;
@@ -21,3 +25,7 @@ $border-color-light: $blue-light;
 $bg-color-secondary: $gray;
 $line-color: $gray-dark;
 $text-color-secondary: $white;
+$required-color: $red;
+$line-form-color: $gray-light;
+$field-form-color: $gray-lighter;
+$text-form-color: $gray-darker;

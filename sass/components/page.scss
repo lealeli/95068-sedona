@@ -56,8 +56,25 @@ p, span {
   font-weight: bold;
   text-decoration: none;
   text-align: center;
+  border: 0;
 
   &--hotel {
     margin: 0 20px;
+  }
+
+  &--feedback {
+    margin: 0 20px 120px 20px;
+    width: 280px;
+  }
+}
+
+label {
+  font-size: $font-size;
+  line-height: 26px;
+  display: inline-block;
+  padding: 0 20px 20px 20px;
+
+  fieldset &:first-of-type {
+    margin-top: 74px;
   }
 }

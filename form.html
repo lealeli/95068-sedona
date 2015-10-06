@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Форма отзыва</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -16,11 +16,11 @@
         <li class="main-nav__item"><a href="#">Фото и видео</a></li>
         <li class="main-nav__item"><a href="#">Гостиницы</a></li>
       </ul>
-      <a href="" class="main-nav__toggle main-nav__toggle--close"></a>
-      <a href="" class="main-nav__toggle main-nav__toggle--open"></a>
+      <a href="#" class="main-nav__toggle main-nav__toggle--close"><span></span></a>
+      <a href="#" class="main-nav__toggle"><span></span></a>
     </nav>
     <a href="/" class="page-header__logo-link">
-      <img src="img/logo.png" alt="Sedona">
+      <img src="img/logo.png" width="138" height="70" alt="Sedona">
     </a>
   </div>
 </header>
@@ -28,7 +28,7 @@
 <main class="content">
   <header class="form-header">
     <div class="form-header__img">
-      <img src="img/sedona_text.svg" alt="Sedona"/></div>
+      <img src="img/logo-text-inner.png" width="174" height="30" alt="Sedona"/></div>
     <h1 class="form-header__title">Оставьте свой отзыв</h1>
     <div class="form-header__descr">
       <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
@@ -53,42 +53,47 @@
 
     <fieldset class="form__fieldset">
       <legend>Ваше общее впечатление:</legend>
-        <label class="field-radio">
-          <input type="radio" name="feeling"  checked>
-          Скорее положительно
+        <input id="feeling1" type="radio" name="feeling"  checked>
+        <label class="field-radio" for="feeling1">
+          <span>Скорее положительно</span>
         </label>
-        <label class="field-radio">
-          <input type="radio" name="feeling">
-          Скорее отрицательно
+        <input  id="feeling2" type="radio" name="feeling">
+        <label class="field-radio" for="feeling2">
+          <span>Скорее отрицательно</span>
         </label>
     </fieldset>
 
 
-    <fieldset class="form__item">
+    <fieldset class="form__fieldset">
       <legend>Даты вашей поездки:</legend>
       <label class="field-text">Дата приезда: <span class="form__required">*</span>
       <input type="date" name="date-coming" required>
       </label>
-      <label class="field-num">Длительность пребывания: <span class="form__required">*</span>
+      <label class="field-text" for="number-day1">
+        Длительность пребывания: <span class="form__required">*</span>
+      </label>
+      <div class="field-num">
         <span class="field-num__item field-num__item--minus"></span>
-        <input type="number" name="number-day" required>
+        <input id="number-day1" type="number" name="number-day" required>
         <span class="field-num__item">дн.</span>
         <span class="field-num__item field-num__item--plus"></span>
-      </label>
+      </div>
       <label class="field-text">Дата отъезда: <span class="form__required">*</span>
         <input type="date" name="date-leave" required>
       </label>
     </fieldset>
 
 
-    <fieldset class="form__item">
+    <fieldset class="form__fieldset">
       <legend>Кол-во путешественников:</legend>
-      <label class="field-num">Количество путешественников: <span class="form__required">*</span>
-        <span class="field-num__item field-num__item--minus"></span>
-        <input type="number" name="number-day" required>
-        <span class="field-num__item">дн.</span>
-        <span class="field-num__item field-num__item--plus"></span>
-      </label>
+      <label class="field-text" for="number-day2">Количество путешественников: <span class="form__required">*</span></label>
+        <div class="field-num">
+          <span class="field-num__item field-num__item--minus"></span>
+          <input  id="number-day2" type="number" name="number-day" required>
+          <span class="field-num__item">чел.</span>
+          <span class="field-num__item field-num__item--plus"></span>
+        </div>
+
       <ul class="form__traveler-list">
         <li>
           <div class="form__traveler">
@@ -120,26 +125,33 @@
     </fieldset>
 
 
-    <fieldset class="form__item">
+    <fieldset class="form__fieldset">
       <legend>Посещенные достопримечательности:</legend>
-      <label class="field-checkbox">
-        <input type="checkbox" name="showplace1" checked>Мост Дьявола
+      <input id="showplace1" type="checkbox" name="showplace1" checked>
+      <label class="field-checkbox" for="showplace1">
+        <span>Мост Дьявола</span>
       </label>
-      <label class="field-checkbox">
-        <input type="checkbox" name="showplace2">Слайд-парк
+      <input id="showplace2" type="checkbox" name="showplace2">
+      <label class="field-checkbox" for="showplace2">
+        <span>Слайд-парк</span>
       </label>
-      <label class="field-checkbox">
-        <input type="checkbox" name="showplace3" checked>Гора-Колокол
+      <input id="showplace3" type="checkbox" name="showplace3" checked>
+      <label class="field-checkbox" for="showplace3">
+        <span>Гора-Колокол</span>
       </label>
-      <label class="field-checkbox">
-        <input type="checkbox" name="showplace4" checked>Красные скалы
+      <input id="showplace4" type="checkbox" name="showplace4" checked>
+      <label class="field-checkbox" for="showplace4">
+        <span>Красные скалы</span>
       </label>
     </fieldset>
 
 
-    <fieldset class="form__item">
+    <fieldset class="form__fieldset">
       <legend>Загрузите фотографии:</legend>
-      <input type="file" value="Выбрать фотографии" multiple>
+      <label class="file_upload" for="file1">
+        <span>Выбрать фотографии</span>
+        <input id="file1" type="file" multiple>
+      </label>
       <div class="form__photo-previews">
         <div class="form__photo-preview">
           <img src="http://placehold.it/70x70" alt=""/>
@@ -201,11 +213,11 @@
   <div class="page-footer__inner">
     <div class="page-footer__social">
       <a href="#" class="page-footer__search-link">#VISITSEDONA</a>
-      <ul class="social-links">
-        <li><a class="social-links__item-tw" href="#">Мы в Twitter</a></li>
-        <li><a class="social-links__item-fb" href="#">Мы на Facebook</a></li>
-        <li><a class="social-links__item-yt" href="#">Мы на Youtube</a></li>
-      </ul>
+      <div class="social-links">
+        <a class="btn-social btn-social--item-tw" href="#"></a>
+        <a class="btn-social btn-social--item-fb" href="#"></a>
+        <a class="btn-social btn-social--item-yt" href="#"></a>
+      </div>
     </div>
     <p class="page-footer__develop">
       <a class="page-footer__develop-icon" href="#">Разработано</a>
