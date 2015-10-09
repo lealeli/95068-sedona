@@ -4,12 +4,12 @@
   &__header {
     font-size: $html-text-size*2.1;
     text-align: center;
-    padding: 28px 20px 19px 20px;
+    padding: 28px 0 19px 0;
   }
 
   &__descr {
     text-align: center;
-    padding: 0 20px 35px 20px;
+    padding-bottom: 35px;
     line-height: 24px;
   }
 }

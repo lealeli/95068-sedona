@@ -1,3 +1,35 @@
 .modal {
   display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  background-color: $bg-color-base;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 42px;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: $html-text-size * 1.8;
+    line-height: 26px;
+  }
+
+  &__descr {
+    margin-bottom: 24px;
+    line-height: 24px;
+  }
+
+  &__button {
+    padding: 0 70px;
+  }
+
+  &--success {
+    top: 10px;
+  }
+
+  &--failure {
+    top: 250px;
+  }
 }

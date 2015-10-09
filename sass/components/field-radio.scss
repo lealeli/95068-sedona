@@ -1,0 +1,33 @@
+.field-radio {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: top;
+  line-height: 56px;
+
+  span {
+    vertical-align: middle;
+    margin-bottom: 45px;
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  &:before {
+    content: '';
+    background-color: $field-form-color;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: 17px solid $field-form-color;
+    display: inline-block;
+    line-height: 56px;
+  }
+
+  input[type="radio"]:checked+&:before{
+    content: '';
+    background-color: $text-color-base;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}

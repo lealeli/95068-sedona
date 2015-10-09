@@ -1,0 +1,12 @@
+.blog-tag {
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../img/icon-tag.png") no-repeat 0 center;
+  padding-left: 20px;
+
+  &__item {
+    display: inline-block;
+    color: #999999;
+    text-decoration: none;
+  }
+}

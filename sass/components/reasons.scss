@@ -1,7 +1,7 @@
 .reasons {
 
   &__item {
-    padding-top: 27px;
+    padding: 27px 20px 0 20px;
     background-color: $bg-color-secondary;
     color: $text-color-base;
 
@@ -11,7 +11,7 @@
     }
 
     &--bg-blue {
-      padding-top: 40px;
+      padding: 40px 0 0 0;
       background-color: $bg-color-main;
       color: $text-color-secondary;
     }
@@ -37,6 +37,9 @@
   }
 
   &__item-photo {
+    line-height: 0;
+    text-align: center;
+
     img {
       max-width: 100%;
       height: auto;
@@ -57,11 +60,11 @@
     }
 
     &--icon-gift {
-      background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 76%;
+      background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 68%;
     }
 
     &--icon-food {
-      background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 160%;
+      background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 123%;
     }
   }
 
@@ -80,7 +83,7 @@
 
   &__line {
     color: $line-color;
-    width: 280px;
+    width: 100%;
     margin: 0 auto;
   }
 }

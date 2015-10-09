@@ -5,25 +5,26 @@ html {
 
 *, :before, :after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
 }
 
 body {
-  width: 320px;
+  min-width: 320px;
 
   font-family: $font-family;
   font-size: $font-size;
   line-height: 1.5em;
   font-weight: normal;
 
-  margin: 0;
+  margin: 0 auto;
 
   color: $text-color-base;
   background-color: $bg-color-base;
 
   text-transform: uppercase;
+}
+
+.content {
+  padding: 0 20px;
 }
 
 h1, h2 {
@@ -36,7 +37,7 @@ h1, h2 {
   text-transform: uppercase;
 }
 
-p, span {
+p{
   font-size: $font-size;
   line-height: 1.5em;
   font-weight: normal;
@@ -46,33 +47,12 @@ p, span {
   text-transform: uppercase;
 }
 
-.btn {
-  display: block;
-  font-size: $html-text-size*2.1;
-  line-height: 57px;
-  height: 57px;
-  background-color: $bg-color-main;
-  color: $text-color-secondary;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  border: 0;
-
-  &--hotel {
-    margin: 0 20px;
-  }
-
-  &--feedback {
-    margin: 0 20px 120px 20px;
-    width: 280px;
-  }
-}
-
 label {
   font-size: $font-size;
   line-height: 26px;
+  width: 100%;
   display: inline-block;
-  padding: 0 20px 20px 20px;
+  padding: 0 0 20px 0;
 
   fieldset &:first-of-type {
     margin-top: 74px;

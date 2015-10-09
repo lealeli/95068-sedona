@@ -1,0 +1,19 @@
+.btn-social {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  margin-right: 3px;
+  background-color: $bg-color-main;
+
+  &--item-tw{
+    background: $bg-color-main url('../img/icon-social.png') no-repeat 12px 50%;
+  }
+
+  &--item-fb{
+    background: $bg-color-main url('../img/icon-social.png') no-repeat 50% 50%;
+  }
+
+  &--item-yt{
+    background: $bg-color-main url('../img/icon-social.png') no-repeat -91px 50%;
+  }
+}

@@ -6,26 +6,22 @@
   &__about {
     &:after {
       content: '';
-      width: 0;
-      height: 0;
-      border-left: 160px solid $bg-color-main;
-      border-right: 160px solid $bg-color-main;
-      border-top: 16px solid $text-color-secondary;
+      height: 37px;
+      width: 100%;
+      background: $bg-color-main url("../img/triangle.png") no-repeat 50% top;
+      display: block;
     }
   }
 
   &__about-img {
-    position: relative;
-    top: -14px;
     width: 100%;
     height: 390px;
-    background: #ffffff url('../img/bg-index.jpg') no-repeat 0 0;
-    margin-bottom: 22px;
+    background: #ffffff url("../img/bg-index.jpg") no-repeat 50% top;
+    margin: -14px 0 22px 0;
+    text-align: center;
 
     img {
-      position: absolute;
-      top: 47px;
-      left: 20px;
+      margin-top: 47px;
     }
   }
 

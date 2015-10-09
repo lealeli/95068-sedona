@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Седона заслуживает большего!</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <title>Блог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
@@ -15,23 +15,23 @@
         <li class="main-nav__item"><a href="#">Фото и видео</a></li>
         <li class="main-nav__item"><a href="#">Гостиницы</a></li>
       </ul>
-      <a href="" class="main-nav__toggle main-nav__toggle--close"></a>
-      <a href="" class="main-nav__toggle main-nav__toggle--open"></a>
+      <a href="#" class="main-nav__toggle main-nav__toggle--close"><span></span></a>
+      <a href="#" class="main-nav__toggle"><span></span></a>
     </nav>
     <a href="/" class="page-header__logo-link">
-      <img src="img/logo.png" alt="Sedona">
+      <img src="img/logo.png" width="138" height="70" alt="Sedona">
     </a>
   </div>
 </header>
 
 <main class="content">
-  <header class="blog-header">
-    <div class="blog-header__img">
-      <img src="img/sedona_text.svg" alt="Sedona"/>
+  <header class="inner-header">
+    <div class="inner-header__img">
+      <img src="img/logo-text-inner.png" width="174" height="30" alt="Sedona"/>
     </div>
-    <h1 class="blog-header__title">Блог Шерифа</h1>
-    <div class="blog-header__descr">
-      <p>Седона удивительный город! Горы здесь красного цвета,а местный шериф ведет блог и общается на форумах.</p>
+    <h1 class="inner-header__title inner-header__title--blog">Блог Шерифа</h1>
+    <div class="inner-header__descr">
+      <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
     </div>
   </header>
 
@@ -40,7 +40,9 @@
     <h2 class="blog-item__title">Внимание! Сбежала моя домашняя анаконда</h2>
     <p class="blog-item__descr">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
     <time class="blog-data">Позавчера</time>
-    <a class="blog-tag" href="#">Проишествия</a>
+    <div class="blog-tag">
+      <a class="blog-tag__item" href="#">Проишествия</a>
+    </div>
   </article>
 
 
@@ -48,7 +50,9 @@
     <h2 class="blog-item__title">Принят антитабачный закон штата</h2>
     <p class="blog-item__descr">Уважаемые туристы, пожалуйста не забывайте, что курение сигарет и сигар в общественных местах города Седона категорически запрещено.</p>
     <time class="blog-data">2 дня назад</time>
-    <a class="blog-tag" href="#">Законы</a>
+    <div class="blog-tag">
+      <a class="blog-tag" href="#">Законы</a>
+    </div>
   </article>
 
 
@@ -56,7 +60,9 @@
     <h2 class="blog-item__title">Маньяк задержан, дает показания</h2>
     <p class="blog-item__descr">Жители седоны могут спать спокойно. Задержан маньяк-эксгибиционист, державший в страхе весь город. Пострадавшим обращаться в 911.</p>
     <time class="blog-data">3 дня назад</time>
-    <a class="blog-tag" href="#">Проишествия</a>
+    <div class="blog-tag">
+      <a class="blog-tag__item" href="#">Проишествия</a>
+    </div>
   </article>
 
 
@@ -64,7 +70,9 @@
     <h2 class="blog-item__title">Водопад закрыт на реконструкцию</h2>
     <p class="blog-item__descr">Всем, кто планировал посещать водопад на этих выходных придется изменить планы, на нем ведутся ремонтные работы по улучшению подачи воды.</p>
     <time class="blog-data">Неделю назад</time>
-    <a class="blog-tag" href="#">Интересное</a>
+    <div class="blog-tag">
+      <a class="blog-tag__item" href="#">Интересное</a>
+    </div>
   </article>
 
 
@@ -72,7 +80,9 @@
     <h2 class="blog-item__title">Отрылся новый стейкхаус «горный бык»</h2>
     <p class="blog-item__descr">Лучшие стейки в Аризоне! Приемлемые цены и только самые лучшие продукты. Заходите попробовать! Действует акция: съешь два и получи третий!</p>
     <time class="blog-data">Месяц назад</time>
-    <a class="blog-tag" href="#">Еда</a>
+    <div class="blog-tag">
+      <a class="blog-tag__item" href="#">Еда</a>
+    </div>
   </article>
 
 
@@ -80,7 +90,9 @@
     <h2 class="blog-item__title">Прогноз погоды на ближайшие выходные</h2>
     <p class="blog-item__descr">Синоптики обещают, что будет ясно, безветрено и около 90 по фаренгейту. Как в пустыне! Проверим их слова уже через пару дней.</p>
     <time class="blog-data">Год назад</time>
-    <a class="blog-tag" href="#">Погода</a>
+    <div class="blog-tag">
+      <a class="blog-tag__item" href="#">Погода</a>
+    </div>
   </article>
 
 
@@ -97,11 +109,11 @@
   <div class="page-footer__inner">
     <div class="page-footer__social">
       <a href="#" class="page-footer__search-link">#VISITSEDONA</a>
-      <ul class="social-links">
-        <li><a class="social-links__item-tw" href="#">Мы в Twitter</a></li>
-        <li><a class="social-links__item-fb" href="#">Мы на Facebook</a></li>
-        <li><a class="social-links__item-yt" href="#">Мы на Youtube</a></li>
-      </ul>
+      <div class="social-links">
+        <a class="btn-social btn-social--item-tw" href="#"></a>
+        <a class="btn-social btn-social--item-fb" href="#"></a>
+        <a class="btn-social btn-social--item-yt" href="#"></a>
+      </div>
     </div>
     <p class="page-footer__develop">
       <a class="page-footer__develop-icon" href="#">Разработано</a>

@@ -1,0 +1,32 @@
+.field-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: top;
+  line-height: 56px;
+
+  span {
+    vertical-align: middle;
+    margin-bottom: 45px;
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  &:before {
+    content: '';
+    background-color: $field-form-color;
+    height: 56px;
+    width: 56px;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 56px;
+  }
+
+  input[type="checkbox"]:checked+&:before{
+    content: '';
+    background: $field-form-color url('../img/icon-checkbox.png') no-repeat 50% 50%;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}

@@ -1,0 +1,25 @@
+.paginator {
+  padding: 44px 0;
+  font-size: 0;
+  border-top: 2px solid #dbdbdb;
+  border-bottom: 2px solid #dbdbdb;
+  margin-bottom: 32px;
+
+  &__item {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background-color: $bg-color-main;
+    color: $text-color-secondary;
+    line-height: 58px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 16px 16px 0;
+    font-size: $html-text-size * 2.1;
+  }
+
+  &__item--active {
+    background-color: #e5e5e5;
+    color: $text-color-base;
+  }
+}

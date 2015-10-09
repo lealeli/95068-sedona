@@ -1,0 +1,14 @@
+.blog-item {
+  border-top: 2px solid #dbdbdb;
+  text-align: center;
+  padding: 37px 0;
+
+  &__title {
+    font-size: $html-text-size * 2.1;
+    padding-bottom: 27px;
+  }
+
+  &__descr {
+    padding-bottom: 27px;
+  }
+}

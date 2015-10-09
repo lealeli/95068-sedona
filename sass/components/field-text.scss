@@ -1,0 +1,18 @@
+.field-text {
+
+  &__title {
+    padding-left: 20px;
+  }
+
+
+  & input {
+    display: block;
+    background-color: $field-form-color;
+    height: 57px;
+    width: 100%;
+    color: $text-color-base;
+    border: 0;
+    line-height: 57px;
+    padding-left: 20px;
+  }
+}

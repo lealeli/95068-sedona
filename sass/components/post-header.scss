@@ -1,0 +1,20 @@
+.lead {
+
+  &__title {
+    font-size: $html-text-size * 2.4;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 37px;
+  }
+
+  & &__text {
+    font-size: $font-size-header;
+    line-height: 26px;
+    color: #766357;
+    text-transform: none;
+    margin-bottom: 37px;
+    text-align: center;
+    padding: 0;
+  }
+}

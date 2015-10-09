@@ -26,26 +26,31 @@
 </header>
 
 <main class="content">
-  <header class="form-header">
-    <div class="form-header__img">
-      <img src="img/logo-text-inner.png" width="174" height="30" alt="Sedona"/></div>
-    <h1 class="form-header__title">Оставьте свой отзыв</h1>
-    <div class="form-header__descr">
+  <header class="inner-header">
+    <div class="inner-header__img">
+      <img src="img/logo-text-inner.png" width="174" height="30" alt="Sedona"/>
+    </div>
+    <h1 class="inner-header__title">Оставьте свой отзыв</h1>
+    <div class="inner-header__descr">
       <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div>
   </header>
 
 
-  <form class="form" action="/echo" method="post" enctype="multiple/form-data">
+  <form class="form" action="/echo" method="post">
     <fieldset class="form__fieldset">
       <legend>Представьтесь, пожалуйта:</legend>
-      <label class="field-text">Фамилия: <span class="form__required">*</span>
+      <label class="field-text">
+        <span class="field-text__title">Фамилия:</span>
+        <span class="form__required">*</span>
         <input type="text" name="surname" placeholder="Иванов" required>
       </label>
-      <label class="field-text">Имя: <span class="form__required">*</span>
+      <label class="field-text"><span class="field-text__title">Имя:</span>
+        <span class="form__required">*</span>
         <input type="text" name="name" placeholder="Петр" required>
       </label>
-      <label class="field-text">Отчество:
+      <label class="field-text">
+        <span class="field-text__title">Отчество:</span>
         <input type="text" name="patronymic" placeholder="Александрович">
       </label>
     </fieldset>
@@ -66,11 +71,14 @@
 
     <fieldset class="form__fieldset">
       <legend>Даты вашей поездки:</legend>
-      <label class="field-text">Дата приезда: <span class="form__required">*</span>
+      <label class="field-text">
+        <span class="field-text__title">Дата приезда:</span>
+        <span class="form__required">*</span>
       <input type="date" name="date-coming" required>
       </label>
       <label class="field-text" for="number-day1">
-        Длительность пребывания: <span class="form__required">*</span>
+        <span class="field-text__title">Длительность пребывания:</span>
+        <span class="form__required">*</span>
       </label>
       <div class="field-num">
         <span class="field-num__item field-num__item--minus"></span>
@@ -78,7 +86,9 @@
         <span class="field-num__item">дн.</span>
         <span class="field-num__item field-num__item--plus"></span>
       </div>
-      <label class="field-text">Дата отъезда: <span class="form__required">*</span>
+      <label class="field-text">
+        <span class="field-text__title">Дата отъезда:</span>
+        <span class="form__required">*</span>
         <input type="date" name="date-leave" required>
       </label>
     </fieldset>
@@ -94,34 +104,42 @@
           <span class="field-num__item field-num__item--plus"></span>
         </div>
 
-      <ul class="form__traveler-list">
+      <ol class="form__traveler-list">
         <li>
           <div class="form__traveler">
-            <label class="field-text">Фамилия: <span class="form__required">*</span>
+            <label class="field-text">
+              <span class="field-text__title">Фамилия:</span>
+              <span class="form__required">*</span>
               <input type="text" name="surname" placeholder="Иванов" required>
             </label>
-            <label class="field-text">Имя: <span class="form__required">*</span>
+            <label class="field-text"><span class="field-text__title">Имя:</span>
+              <span class="form__required">*</span>
               <input type="text" name="name" placeholder="Петр" required>
             </label>
-            <label class="field-text">Отчество:
+            <label class="field-text">
+              <span class="field-text__title">Отчество:</span>
               <input type="text" name="patronymic" placeholder="Александрович">
             </label>
           </div>
         </li>
         <li>
           <div class="form__traveler">
-            <label class="field-text">Фамилия: <span class="form__required">*</span>
+            <label class="field-text">
+              <span class="field-text__title">Фамилия:</span>
+              <span class="form__required">*</span>
               <input type="text" name="surname" placeholder="Иванов" required>
             </label>
-            <label class="field-text">Имя: <span class="form__required">*</span>
+            <label class="field-text"><span class="field-text__title">Имя:</span>
+              <span class="form__required">*</span>
               <input type="text" name="name" placeholder="Петр" required>
             </label>
-            <label class="field-text">Отчество:
+            <label class="field-text">
+              <span class="field-text__title">Отчество:</span>
               <input type="text" name="patronymic" placeholder="Александрович">
             </label>
           </div>
         </li>
-      </ul>
+      </ol>
     </fieldset>
 
 
@@ -154,35 +172,38 @@
       </label>
       <div class="form__photo-previews">
         <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
+          <img src="img/photo-preview-1.jpg" width="70"
+               height="70" alt=""/>
           <div class="form__photo-preview-delete"></div>
         </div>
         <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
+          <img src="img/photo-preview-2.jpg" width="70"
+               height="70"  alt=""/>
           <div class="form__photo-preview-delete"></div>
         </div>
         <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
+          <img src="img/photo-preview-3.jpg" width="70"
+               height="70"  alt=""/>
           <div class="form__photo-preview-delete"></div>
         </div>
         <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
+          <img src="img/photo-preview-4.jpg" width="70"
+               height="70"  alt=""/>
           <div class="form__photo-preview-delete"></div>
         </div>
         <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
+          <img src="img/photo-preview-5.jpg" width="70"
+               height="70"  alt=""/>
           <div class="form__photo-preview-delete"></div>
         </div>
         <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
+          <img src="img/photo-preview-6.jpg" width="70"
+               height="70"  alt=""/>
           <div class="form__photo-preview-delete"></div>
         </div>
         <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
-          <div class="form__photo-preview-delete"></div>
-        </div>
-        <div class="form__photo-preview">
-          <img src="http://placehold.it/70x70" alt=""/>
+          <img src="img/photo-preview-7.jpg" width="70"
+               height="70"  alt=""/>
           <div class="form__photo-preview-delete"></div>
         </div>
       </div>
@@ -194,17 +215,19 @@
 
 
   <div class="modal modal--failure">
-    <strong class="feedback-modal__title">Что-то пошло не так!</strong>
-    <p class="feedback-modal__descr">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button class="btn btn--failure" type="button">Ок</button>
+    <strong class="modal__title">Что-то пошло не так!</strong>
+    <p class="modal__descr">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <div class="modal__button">
+      <button class="btn btn--modal" type="button">Ок</button>
+    </div>
   </div>
 
 
   <div class="modal modal--success">
-    <strong class="feedback-modal__title">Ваш отзыв отправлен!</strong>
-    <p class="feedback-modal__descr">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-    <div class="feedback-modal__button-success">
-      <button class="btn btn--success" type="button">Закрыть окно</button>
+    <strong class="modal__title">Ваш отзыв отправлен!</strong>
+    <p class="modal__descr">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <div class="modal__button">
+      <button class="btn btn--modal" type="button">Закрыть окно</button>
     </div>
   </div>
 </main>

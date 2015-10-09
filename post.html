@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Седона заслуживает большего!</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <title>Пост</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header class="page-header">
   <div class="page-header__inner">
     <nav class="main-nav">
@@ -15,34 +16,37 @@
         <li class="main-nav__item"><a href="#">Фото и видео</a></li>
         <li class="main-nav__item"><a href="#">Гостиницы</a></li>
       </ul>
-      <a href="" class="main-nav__toggle main-nav__toggle--close"></a>
-      <a href="" class="main-nav__toggle main-nav__toggle--open"></a>
+      <a href="#" class="main-nav__toggle main-nav__toggle--close"><span></span></a>
+      <a href="#" class="main-nav__toggle"><span></span></a>
     </nav>
     <a href="/" class="page-header__logo-link">
-      <img src="img/logo.png" alt="Sedona">
+      <img src="img/logo.png" width="138" height="70" alt="Sedona">
     </a>
   </div>
 </header>
 
 <main class="content">
-  <header class="blog-header">
-    <div class="blog-header__img">
-      <img src="img/sedona_text.svg" alt="Sedona"/>
+  <header class="inner-header">
+    <div class="inner-header__img">
+      <img src="img/logo-text-inner.png" width="174" height="30" alt="Sedona"/>
     </div>
-    <h1 class="blog-header__title">Блог Шерифа</h1>
-    <div class="blog-header__descr">
-      <p>Седона удивительный город! Горы здесь красного цвета,а местный шериф ведет блог и общается на форумах.</p>
+    <h1 class="inner-header__title inner-header__title--blog">Блог Шерифа</h1>
+    <div class="inner-header__descr">
+      <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
     </div>
   </header>
+
   <time class="blog-data">Позавчера</time>
-  <a class="blog-tag" href="#">Проишествия</a>
+  <div class="blog-tag">
+    <a class="blog-tag__item" href="#">Проишествия</a>
+  </div>
 
 
   <section class="post">
-    <section class="lead">
-      <h1 class="post__title">Внимание! Сбежала моя домашняя анаконда</h1>
-      <p class="post__descr">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
-    </section>
+    <header class="lead">
+      <h1 class="lead__title">Внимание! Сбежала моя домашняя анаконда</h1>
+      <p class="lead__text">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
+    </header>
     <h2>Предыстория</h2>
     <p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал  тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
     <h2>Пропажа</h2>
@@ -76,11 +80,11 @@
   <div class="page-footer__inner">
     <div class="page-footer__social">
       <a href="#" class="page-footer__search-link">#VISITSEDONA</a>
-      <ul class="social-links">
-        <li><a class="social-links__item-tw" href="#">Мы в Twitter</a></li>
-        <li><a class="social-links__item-fb" href="#">Мы на Facebook</a></li>
-        <li><a class="social-links__item-yt" href="#">Мы на Youtube</a></li>
-      </ul>
+      <div class="social-links">
+        <a class="btn-social btn-social--item-tw" href="#"></a>
+        <a class="btn-social btn-social--item-fb" href="#"></a>
+        <a class="btn-social btn-social--item-yt" href="#"></a>
+      </div>
     </div>
     <p class="page-footer__develop">
       <a class="page-footer__develop-icon" href="#">Разработано</a>

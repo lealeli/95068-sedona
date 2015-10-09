@@ -1,0 +1,30 @@
+.post-paginator {
+  padding: 45px 0;
+  font-size: 0;
+  border-top: 2px solid #dbdbdb;
+  border-bottom: 2px solid #dbdbdb;
+  margin-bottom: 52px;
+
+  &__item {
+    display: inline-block;
+    width: 47%;
+    height: 58px;
+    background-color: $bg-color-base;
+    color: $text-color-base;
+    border: 2px solid $bg-color-main;
+    line-height: 58px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 20px 0;
+    font-size: $html-text-size * 2.1;
+
+    &:nth-child(1) {
+      margin-right: 6%;
+    }
+  }
+
+  &__item--back-to-list {
+    width: 100%;
+  }
+}
