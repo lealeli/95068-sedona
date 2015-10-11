@@ -88,4 +88,68 @@
   }
 }
 
+@media(min-width: 768px) {
+  .reasons {
 
+    &__item {
+      width: 33%;
+      display: inline-block;
+
+      &--bg-blue {
+        width: 100%;
+      }
+    }
+
+    &__item-text {
+      width: 33%;
+      display: inline-block;
+    }
+
+    &__item-photo {
+      width: 66%;
+      display: inline-block;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__fact {
+      padding: 50px 0 0 0;
+    }
+
+    &__fact-item {
+      padding: 103px 45px 50px 45px;
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+
+
+      &--icon-house {
+        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat top center;
+      }
+
+      &--icon-gift {
+        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
+      }
+
+      &--icon-food {
+        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
+      }
+    }
+
+
+    &__fact-item-header {
+      padding: 0;
+    }
+
+    &__fact-item-descr {
+      padding: 0;
+    }
+
+    &__line {
+      display: none;
+    }
+  }
+}

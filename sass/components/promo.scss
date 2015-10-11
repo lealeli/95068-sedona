@@ -40,3 +40,14 @@
     padding: 0 20px;
   }
 }
+
+@media(min-width: 768px) {
+  .promo-sedona {
+
+    &__about {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
