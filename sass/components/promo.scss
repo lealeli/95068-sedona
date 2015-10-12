@@ -23,15 +23,21 @@
     background: #ffffff url("../img/bg-index.jpg") no-repeat 50% top;
     margin: -14px 0 22px 0;
     text-align: center;
-
-    &:after {
-      content: '';
-      background: transparent url("../img/intro-triangle.svg") no-repeat 50% top;
-    }
+    font-size: 0;
 
     img {
       margin-top: 47px;
     }
+  }
+
+  &__about-triangle {
+    background: transparent url("../img/intro-triangle.svg") no-repeat;
+    width: 768px;
+    background-size: contain;
+    height: 37px;
+    margin: 0 auto;
+    bottom: 0;
+    padding-top: 10px;
   }
 
   &__about-header {
