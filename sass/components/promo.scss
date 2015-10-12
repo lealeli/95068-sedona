@@ -10,6 +10,10 @@
       width: 100%;
       background: $bg-color-main url("../img/triangle.png") no-repeat 50% top;
       display: block;
+
+      @media(min-width: $width-tablet) {
+        display: none;
+      }
     }
   }
 
@@ -19,6 +23,11 @@
     background: #ffffff url("../img/bg-index.jpg") no-repeat 50% top;
     margin: -14px 0 22px 0;
     text-align: center;
+
+    &:after {
+      content: '';
+      background: transparent url("../img/intro-triangle.svg") no-repeat 50% top;
+    }
 
     img {
       margin-top: 47px;
@@ -38,16 +47,5 @@
     text-align: center;
     line-height: 1.8em;
     padding: 0 20px;
-  }
-}
-
-@media(min-width: 768px) {
-  .promo-sedona {
-
-    &__about {
-      &:after {
-        display: none;
-      }
-    }
   }
 }
