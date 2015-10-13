@@ -59,13 +59,18 @@
     background-size: contain;
     height: 37px;
     position: absolute;
-    width: 100%;
     bottom: 0;
+    width: 768px;
+    left: 50%;
+    margin-left: -384px;
 
     @media(min-width: $width-tablet) {
       background: transparent url("../img/intro-triangle.svg") no-repeat 50% 100%;
       background-size: contain;
       height: 37px;
+      width: 100%;
+      left: 0;
+      margin-left: 0;
     }
 
     @media(min-width: $width-desktop) {

@@ -5,6 +5,16 @@
     background-color: $bg-color-secondary;
     color: $text-color-base;
 
+    @media(min-width: $width-tablet) {
+      padding: 0;
+    }
+
+    @media(min-width: $width-tablet) {
+      width: 33%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
     &--bg-blue &-descr {
       text-align: center;
       padding: 0 20px 40px 20px;
@@ -14,10 +24,27 @@
       padding: 40px 0 0 0;
       background-color: $bg-color-main;
       color: $text-color-secondary;
+
+      @media(min-width: $width-tablet) {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     &:first-child {
       padding-top: 28px;
+
+      @media(min-width: $width-tablet) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__item-text {
+    @media(min-width: $width-tablet) {
+      width: 33%;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 
@@ -40,6 +67,12 @@
     line-height: 0;
     text-align: center;
 
+    @media(min-width: $width-tablet) {
+      width: 66%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
     img {
       max-width: 100%;
       height: auto;
@@ -50,21 +83,43 @@
     padding: 30px 20px 20px 20px;
     background-color: $text-color-secondary;
     color: $text-color-base;
+
+    @media(min-width: $width-tablet) {
+      padding: 50px 0 0 0;
+    }
   }
 
   &__fact-item {
+    @media(min-width: $width-tablet) {
+      padding: 103px 45px 50px 45px;
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+    }
 
 
     &--icon-house {
       background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 0;
+
+      @media(min-width: $width-tablet) {
+        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat top center;
+      }
     }
 
     &--icon-gift {
       background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 68%;
+
+      @media(min-width: $width-tablet) {
+        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
+      }
     }
 
     &--icon-food {
       background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 123%;
+
+      @media(min-width: $width-tablet) {
+        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
+      }
     }
   }
 
@@ -73,82 +128,28 @@
     padding-left: 50px;
     font-size: $font-size-header;
     line-height: 51px;
+
+    @media(min-width: $width-tablet) {
+      padding: 0;
+    }
   }
 
   &__fact-item-descr {
     padding-left: 50px;
     padding-bottom: 18px;
     line-height: 1.5em;
+
+    @media(min-width: $width-tablet) {
+      padding: 0;
+    }
   }
 
   &__line {
     color: $line-color;
     width: 100%;
     margin: 0 auto;
-  }
-}
 
-@media(min-width: 768px) {
-  .reasons {
-
-    &__item {
-      width: 33%;
-      display: inline-block;
-
-      &--bg-blue {
-        width: 100%;
-      }
-    }
-
-    &__item-text {
-      width: 33%;
-      display: inline-block;
-    }
-
-    &__item-photo {
-      width: 66%;
-      display: inline-block;
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    &__fact {
-      padding: 50px 0 0 0;
-    }
-
-    &__fact-item {
-      padding: 103px 45px 50px 45px;
-      display: inline-block;
-      width: 33%;
-      text-align: center;
-
-
-      &--icon-house {
-        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat top center;
-      }
-
-      &--icon-gift {
-        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
-      }
-
-      &--icon-food {
-        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
-      }
-    }
-
-
-    &__fact-item-header {
-      padding: 0;
-    }
-
-    &__fact-item-descr {
-      padding: 0;
-    }
-
-    &__line {
+    @media(min-width: $width-tablet) {
       display: none;
     }
   }
