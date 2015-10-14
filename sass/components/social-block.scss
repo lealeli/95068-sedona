@@ -1,5 +1,9 @@
 .social-links {
-  width: 100%;
   text-align: center;
   margin-bottom: 40px;
+
+  @media(min-width: $width-tablet) {
+    margin-bottom: 0;
+    width: 33%;
+  }
 }
