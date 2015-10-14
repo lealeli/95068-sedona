@@ -100,7 +100,7 @@
     background-color: $text-color-secondary;
 
     &__list {
-      display: inline-block;
+      display: flex;
       width: 100%;
     }
 

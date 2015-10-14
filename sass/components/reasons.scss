@@ -1,4 +1,8 @@
 .reasons {
+  @media(min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__item {
     padding: 27px 20px 0 20px;
@@ -7,15 +11,15 @@
 
     @media(min-width: $width-tablet) {
       padding: 0;
-    }
-
-    @media(min-width: $width-tablet) {
+      display: inline-flex;
       width: 33%;
-      display: inline-block;
-      vertical-align: middle;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 255px;
+      flex-grow: 1;
     }
 
-    &--bg-blue &-descr {
+    &--bg-blue &--descr {
       text-align: center;
       padding: 0 20px 40px 20px;
     }
@@ -26,8 +30,8 @@
       color: $text-color-secondary;
 
       @media(min-width: $width-tablet) {
-        width: 100%;
         padding: 0;
+        width: 100%;
       }
     }
 
@@ -36,21 +40,38 @@
 
       @media(min-width: $width-tablet) {
         padding: 0;
+        height: 100%;
+      }
+    }
+
+    &:nth-child(2) {
+
+      @media(min-width: $width-tablet) {
+        flex-direction: row-reverse;
       }
     }
   }
 
   &__item-text {
     @media(min-width: $width-tablet) {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__item--bg-blue &__item-text {
+    @media(min-width: $width-tablet) {
       width: 33%;
-      display: inline-block;
-      vertical-align: middle;
     }
   }
 
   &__item-header {
     text-align: center;
     padding-bottom: 20px;
+
+    @media(min-width: $width-tablet) {
+      padding-top: 49px;
+    }
   }
 
   &__item-number {
@@ -64,18 +85,24 @@
   }
 
   &__item-photo {
-    line-height: 0;
-    text-align: center;
+    width: 100%;
+    height: 255px;
+    background: url('../img/photo-city.jpg') no-repeat 100% 0;
 
     @media(min-width: $width-tablet) {
-      width: 66%;
-      display: inline-block;
-      vertical-align: middle;
+      width: 67%;
+      display: block;
+      text-align: right;
     }
+  }
 
-    img {
-      max-width: 100%;
-      height: auto;
+  &__item:nth-child(2) &__item-photo {
+    background: url('../img/photo-bridge.jpg') no-repeat 0 0;
+
+
+    @media(min-width: $width-tablet) {
+      width: 67%;
+      text-align: left;
     }
   }
 
@@ -86,6 +113,7 @@
 
     @media(min-width: $width-tablet) {
       padding: 50px 0 0 0;
+      height: 330px;
     }
   }
 
@@ -99,26 +127,32 @@
 
 
     &--icon-house {
-      background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 0;
+      background: $text-color-secondary url('../img/icon-house.svg') no-repeat 0 0;
+      background-size: 34px, 34px;
 
       @media(min-width: $width-tablet) {
-        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat top center;
+        background: $text-color-secondary url('../img/icon-house.svg') no-repeat top center;
+        background-size: 74px, 74px;
       }
     }
 
     &--icon-gift {
-      background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 68%;
+      background: $text-color-secondary url('../img/icon-gift.svg') no-repeat 0 0;
+      background-size: 34px, 34px;
 
       @media(min-width: $width-tablet) {
-        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
+        background: $text-color-secondary url('../img/icon-gift.svg') no-repeat  top center;
+        background-size: 74px, 74px;
       }
     }
 
     &--icon-food {
-      background: $text-color-secondary url('../img/icon-reasons.png') no-repeat 0 123%;
+      background: $text-color-secondary url('../img/icon-burger.svg') no-repeat 0 0;
+      background-size: 34px, 34px;
 
       @media(min-width: $width-tablet) {
-        background: $text-color-secondary url('../img/icon-reasons.png') no-repeat  top center;
+        background: $text-color-secondary url('../img/icon-burger.svg') no-repeat  top center;
+        background-size: 74px, 74px;
       }
     }
   }
