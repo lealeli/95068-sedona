@@ -15,6 +15,13 @@
     width: 100%;
     text-align: center;
     font-weight: bold;
+
+    @media(min-width: $width-tablet){
+      width: 400px;
+      position: initial;
+      font-size: $html-text-size * 2.1;
+      line-height: 26px;
+    }
   }
 
   &__required {
@@ -23,8 +30,17 @@
   }
 
   &__photo-previews {
-    padding: 0 20px 0 20px;
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -35px;
+
+    @media(min-width: $width-tablet){
+      margin: 0 auto;
+    }
+
+    @media(min-width: $width-desktop){
+      margin: 0 0 0 -65px;
+    }
   }
 
   &__photo-preview {
@@ -32,8 +48,14 @@
     display: inline-block;
     width: 70px;
     height: 70px;
-    margin: 0 31px 45px 0;
+    margin: 0 0 45px 35px;
     font-size: 0;
+
+    @media(min-width: $width-tablet){
+      width: 140px;
+      height: 140px;
+      margin-left: 64px;
+    }
 
     img {
       width: 100%;
@@ -50,6 +72,13 @@
     height: 30px;
     border-radius: 50%;
 
+    @media(min-width: $width-tablet){
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      left: 110px;
+    }
+
     &:before, &:after {
       width: 14px;
       height: 2px;
@@ -61,6 +90,13 @@
       top: 13px;
       content: '';
       transform-origin: 50% 50%;
+
+      @media(min-width: $width-tablet){
+        width: 30px;
+        height: 3px;
+        left: 15px;
+        top: 28px;
+      }
     }
 
     &:before {

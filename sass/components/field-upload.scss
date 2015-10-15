@@ -9,6 +9,11 @@
   background-color: $field-form-color;
   cursor: pointer;
 
+  @media(min-width: $width-tablet){
+    width: 458px;
+    margin: 61px auto 40px auto;
+  }
+
   span {
     color: $text-form-color;
     font-size: $html-text-size*2.1;

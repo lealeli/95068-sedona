@@ -23,6 +23,11 @@
   &--feedback {
     margin: 0 0 120px 0;
     width: 100%;
+
+    @media(min-width: $width-tablet) {
+      width: 458px;
+      margin: 0 auto 120px auto;
+    }
   }
 
   &--modal {

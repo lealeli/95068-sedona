@@ -1,4 +1,8 @@
 .field-text {
+  width: 33%;
+  @media(min-width: $width-tablet){
+
+  }
 
   &__title {
     padding-left: 20px;
