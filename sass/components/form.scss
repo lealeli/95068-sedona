@@ -24,6 +24,39 @@
     }
   }
 
+  &__fieldset-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__radio-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+      justify-content: space-between;
+    }
+
+    @media (min-width: $width-desktop) {
+      justify-content: center;
+    }
+  }
+
+  &__checkbox-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $width-desktop) {
+      justify-content: space-between;
+    }
+  }
+
   &__required {
     color: $required-color;
     margin-right: 15px;
@@ -109,7 +142,27 @@
   }
 
   &__traveler {
+    list-style-type: none;
     position: relative;
+
+    label.field-text {
+      margin: 0;
+      padding-left: 67px;
+
+      @media(min-width: $width-desktop) {
+        padding: 0 20px 0 20px;
+
+        &:first-of-type {
+          padding: 0 40px 0 67px;
+        }
+
+        &:last-of-type {
+          padding: 0 0 0 40px;
+        }
+      }
+
+
+    }
 
     &:before {
       content: '№';
@@ -118,22 +171,7 @@
       left: 24px;
     }
 
-    label.field-text {
-      margin: 0;
-      padding-left: 67px;
-    }
-  }
-
-  &__traveler-list {
-    counter-reset: list;
-    padding: 0;
-
-    li {
-      list-style-type: none;
-      position: relative;
-    }
-
-    li:before {
+    &:after {
       content: counter(list);
       counter-increment: list;
       position: absolute;
@@ -146,5 +184,10 @@
       line-height: 58px;
       font-weight: bold;
     }
+  }
+
+  &__traveler-list {
+    counter-reset: list;
+    padding: 0;
   }
 }

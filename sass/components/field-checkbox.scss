@@ -4,6 +4,38 @@
   vertical-align: top;
   line-height: 56px;
 
+  @media (min-width: $width-tablet) and (max-width: $width-desktop){
+    width: 34%;
+  }
+
+  @media (min-width: $width-desktop){
+    width: auto;
+  }
+
+  &:nth-of-type(1) {
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+      order: 1;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+      order: 3;
+    }
+  }
+
+  &:nth-of-type(3) {
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+      order: 2;
+    }
+  }
+
+  &:nth-of-type(4) {
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+      order: 4;
+    }
+  }
+
   span {
     vertical-align: middle;
     margin-bottom: 45px;

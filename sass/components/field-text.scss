@@ -1,7 +1,16 @@
 .field-text {
-  width: 33%;
+  width: 100%;
   @media(min-width: $width-tablet){
+    width: 33%;
+    padding: 0 20px 20px 20px;
 
+    &:first-of-type {
+      padding: 0 40px 20px 0;
+    }
+
+    &:last-of-type {
+      padding: 0 0 20px 40px;
+    }
   }
 
   &__title {
@@ -19,4 +28,18 @@
     line-height: 57px;
     padding-left: 20px;
   }
+
+  &--center:first-of-type {
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+      padding-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (min-width: $width-desktop) {
+      padding-left: 0;
+      padding-right: 40px;
+    }
+  }
 }
+

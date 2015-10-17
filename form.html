@@ -29,7 +29,8 @@
 <main class="content">
   <header class="inner-header">
     <div class="inner-header__img">
-      <img src="img/logo-text-inner.png" width="174" height="30" alt="Sedona"/>
+      <div class="inner-header__img-sedona"></div>
+      <div class="inner-header__img-triangle"></div>
     </div>
     <h1 class="inner-header__title">Оставьте свой отзыв</h1>
     <div class="inner-header__descr">
@@ -41,24 +42,27 @@
   <form class="form" action="/echo" method="post">
     <fieldset class="form__fieldset">
       <legend>Представьтесь, пожалуйта:</legend>
-      <label class="field-text">
-        <span class="field-text__title">Фамилия:</span>
-        <span class="form__required">*</span>
-        <input type="text" name="surname" placeholder="Иванов" required>
-      </label>
-      <label class="field-text"><span class="field-text__title">Имя:</span>
-        <span class="form__required">*</span>
-        <input type="text" name="name" placeholder="Петр" required>
-      </label>
-      <label class="field-text">
-        <span class="field-text__title">Отчество:</span>
-        <input type="text" name="patronymic" placeholder="Александрович">
-      </label>
+      <div class="form__fieldset-inner">
+        <label class="field-text">
+          <span class="field-text__title">Фамилия:</span>
+          <span class="form__required">*</span>
+          <input type="text" name="surname" placeholder="Иванов" required>
+        </label>
+        <label class="field-text"><span class="field-text__title">Имя:</span>
+          <span class="form__required">*</span>
+          <input type="text" name="name" placeholder="Петр" required>
+        </label>
+        <label class="field-text">
+          <span class="field-text__title">Отчество:</span>
+          <input type="text" name="patronymic" placeholder="Александрович">
+        </label>
+      </div>
     </fieldset>
 
 
     <fieldset class="form__fieldset">
       <legend>Ваше общее впечатление:</legend>
+      <div class="form__radio-inner">
         <input id="feeling1" type="radio" name="feeling"  checked>
         <label class="field-radio" for="feeling1">
           <span>Скорее положительно</span>
@@ -67,78 +71,77 @@
         <label class="field-radio" for="feeling2">
           <span>Скорее отрицательно</span>
         </label>
+      </div>
     </fieldset>
 
 
     <fieldset class="form__fieldset">
       <legend>Даты вашей поездки:</legend>
-      <label class="field-text">
-        <span class="field-text__title">Дата приезда:</span>
-        <span class="form__required">*</span>
-      <input type="text" name="date-coming" required>
-      </label>
-      <label class="field-text" for="number-day1">
-        <span class="field-text__title">Длительность пребывания:</span>
-        <span class="form__required">*</span>
-      </label>
-      <div class="field-num">
-        <span class="field-num__item field-num__item--minus"></span>
-        <input id="number-day1" type="text" name="number-day" required>
-        <span class="field-num__item">дн.</span>
-        <span class="field-num__item field-num__item--plus"></span>
+      <div class="form__fieldset-inner">
+        <label class="field-text">
+          <span class="field-text__title">Дата приезда:</span>
+          <span class="form__required">*</span>
+          <input type="text" name="date-coming" required>
+        </label>
+        <label class="field-text" for="number-day1">
+          <span class="field-text__title">Дней пребывания:</span>
+          <span class="form__required">*</span>
+          <div class="field-num">
+            <span class="field-num__item field-num__item--minus"></span>
+            <input id="number-day1" type="text" name="number-day" required>
+            <span class="field-num__item field-num__item--plus"></span>
+          </div>
+        </label>
+        <label class="field-text">
+          <span class="field-text__title">Дата отъезда:</span>
+          <span class="form__required">*</span>
+          <input type="text" name="date-leave" required>
+        </label>
       </div>
-      <label class="field-text">
-        <span class="field-text__title">Дата отъезда:</span>
-        <span class="form__required">*</span>
-        <input type="text" name="date-leave" required>
-      </label>
     </fieldset>
 
 
     <fieldset class="form__fieldset">
       <legend>Кол-во путешественников:</legend>
-      <label class="field-text" for="number-day2">Количество путешественников: <span class="form__required">*</span></label>
-        <div class="field-num">
+      <label class="field-text field-text--center" for="number-day2">
+        <span class="field-text__title">Количество путешественников:</span>
+        <span class="form__required">*</span>
+        <div class="field-num field-num--center">
           <span class="field-num__item field-num__item--minus"></span>
           <input  id="number-day2" type="text" name="number-day" required>
-          <span class="field-num__item">чел.</span>
           <span class="field-num__item field-num__item--plus"></span>
         </div>
-
+      </label>
       <ol class="form__traveler-list">
-        <li>
-          <div class="form__traveler">
-            <label class="field-text">
-              <span class="field-text__title">Фамилия:</span>
-              <span class="form__required">*</span>
-              <input type="text" name="surname" placeholder="Иванов" required>
-            </label>
-            <label class="field-text"><span class="field-text__title">Имя:</span>
-              <span class="form__required">*</span>
-              <input type="text" name="name" placeholder="Петр" required>
-            </label>
-            <label class="field-text">
-              <span class="field-text__title">Отчество:</span>
-              <input type="text" name="patronymic" placeholder="Александрович">
-            </label>
-          </div>
+        <li class="form__traveler">
+          <label class="field-text">
+            <span class="field-text__title">Фамилия:</span>
+            <span class="form__required">*</span>
+            <input type="text" name="surname" placeholder="Иванов" required>
+          </label>
+          <label class="field-text"><span class="field-text__title">Имя:</span>
+            <span class="form__required">*</span>
+            <input type="text" name="name" placeholder="Петр" required>
+          </label>
+          <label class="field-text">
+            <span class="field-text__title">Отчество:</span>
+            <input type="text" name="patronymic" placeholder="Александрович">
+          </label>
         </li>
-        <li>
-          <div class="form__traveler">
-            <label class="field-text">
-              <span class="field-text__title">Фамилия:</span>
-              <span class="form__required">*</span>
-              <input type="text" name="surname" placeholder="Иванов" required>
-            </label>
-            <label class="field-text"><span class="field-text__title">Имя:</span>
-              <span class="form__required">*</span>
-              <input type="text" name="name" placeholder="Петр" required>
-            </label>
-            <label class="field-text">
-              <span class="field-text__title">Отчество:</span>
-              <input type="text" name="patronymic" placeholder="Александрович">
-            </label>
-          </div>
+        <li class="form__traveler">
+          <label class="field-text">
+            <span class="field-text__title">Фамилия:</span>
+            <span class="form__required">*</span>
+            <input type="text" name="surname" placeholder="Иванов" required>
+          </label>
+          <label class="field-text"><span class="field-text__title">Имя:</span>
+            <span class="form__required">*</span>
+            <input type="text" name="name" placeholder="Петр" required>
+          </label>
+          <label class="field-text">
+            <span class="field-text__title">Отчество:</span>
+            <input type="text" name="patronymic" placeholder="Александрович">
+          </label>
         </li>
       </ol>
     </fieldset>
@@ -146,22 +149,24 @@
 
     <fieldset class="form__fieldset">
       <legend>Посещенные достопримечательности:</legend>
-      <input id="showplace1" type="checkbox" name="showplace1" checked>
-      <label class="field-checkbox" for="showplace1">
-        <span>Мост Дьявола</span>
-      </label>
-      <input id="showplace2" type="checkbox" name="showplace2">
-      <label class="field-checkbox" for="showplace2">
-        <span>Слайд-парк</span>
-      </label>
-      <input id="showplace3" type="checkbox" name="showplace3" checked>
-      <label class="field-checkbox" for="showplace3">
-        <span>Гора-Колокол</span>
-      </label>
-      <input id="showplace4" type="checkbox" name="showplace4" checked>
-      <label class="field-checkbox" for="showplace4">
-        <span>Красные скалы</span>
-      </label>
+      <div class="form__checkbox-inner">
+        <input id="showplace1" type="checkbox" name="showplace1" checked>
+        <label class="field-checkbox" for="showplace1">
+          <span>Мост Дьявола</span>
+        </label>
+        <input id="showplace2" type="checkbox" name="showplace2">
+        <label class="field-checkbox" for="showplace2">
+          <span>Слайд-парк</span>
+        </label>
+        <input id="showplace3" type="checkbox" name="showplace3" checked>
+        <label class="field-checkbox" for="showplace3">
+          <span>Гора-Колокол</span>
+        </label>
+        <input id="showplace4" type="checkbox" name="showplace4" checked>
+        <label class="field-checkbox" for="showplace4">
+          <span>Красные скалы</span>
+        </label>
+      </div>
     </fieldset>
 
 

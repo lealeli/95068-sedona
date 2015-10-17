@@ -1,9 +1,23 @@
 .paginator {
+  display: block;
+  vertical-align: middle;
   padding: 44px 0;
   font-size: 0;
   border-top: 2px solid #dbdbdb;
   border-bottom: 2px solid #dbdbdb;
   margin-bottom: 32px;
+
+  @media(min-width: $width-tablet) {
+    border: 0;
+  }
+
+  &__list {
+    display: inline-block;
+
+    @media(min-width: $width-desktop) {
+      width: 33%;
+    }
+  }
 
   &__item {
     display: inline-block;
@@ -16,10 +30,37 @@
     text-decoration: none;
     margin: 0 16px 16px 0;
     font-size: $html-text-size * 2.1;
+
+    @media(min-width: $width-tablet) and (max-width: $width-desktop) {
+      margin: 0 16px 0 0;
+    }
   }
 
   &__item--active {
     background-color: #e5e5e5;
     color: $text-color-base;
+  }
+
+  &__item-title {
+    display: none;
+
+    @media(min-width: $width-tablet) and (max-width: $width-desktop) {
+      display: inline-block;
+      vertical-align: baseline;
+      padding-right: 67px;
+      padding-left: 5.5%;
+      font-size: $html-text-size * 2.1;
+      font-weight: bold;
+    }
+
+    @media(min-width: $width-desktop) {
+      display: inline-block;
+      vertical-align: baseline;
+      padding-right: 0;
+      font-size: $html-text-size * 2.1;
+      font-weight: bold;
+      width: 33%;
+      text-align: center;
+    }
   }
 }

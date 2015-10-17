@@ -4,6 +4,14 @@
   border-top: 2px solid #dbdbdb;
   border-bottom: 2px solid #dbdbdb;
   margin-bottom: 52px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media(min-width: $width-tablet) {
+    border: 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 
   &__item {
     display: inline-block;
@@ -21,10 +29,22 @@
 
     &:nth-child(1) {
       margin-right: 6%;
+
+      @media(min-width: $width-tablet) {
+        margin-right: 0;
+      }
+    }
+
+    @media(min-width: $width-tablet) {
+      width: 211px;
     }
   }
 
   &__item--back-to-list {
     width: 100%;
+
+    @media(min-width: $width-tablet) {
+      width: 211px;
+    }
   }
 }

@@ -1,9 +1,13 @@
 .field-num {
-  padding: 0 0 20px 0;
   cursor: pointer;
+  display: flex;
+  width: 100%;
+
+
   &__item {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex: 0 0 auto;
     vertical-align: middle;
     background-color: $field-form-color;
     height: 58px;
@@ -11,6 +15,9 @@
     text-align: center;
     line-height: 58px;
     margin-right: 4px;
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: $html-text-size * 2.1;
 
     &--minus:before, &--plus:before, &--plus:after {
       content: '';
@@ -35,14 +42,29 @@
 
   input {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex: 1 1 auto;
     vertical-align: middle;
     background-color: $field-form-color;
     height: 58px;
     text-align: center;
     line-height: 58px;
-    width: 80px;
-    margin-right: -4px;
+    margin-right: 4px;
     border: 0;
+  }
+
+  &--center {
+
+    &:first-of-type {
+      @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+        width: 33%;
+        padding: 0 20px 0 20px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: $width-desktop) {
+        padding: 0;
+      }
+    }
   }
 }
