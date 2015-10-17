@@ -20,6 +20,10 @@
     font-size: 0;
     position: relative;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-inner-2x.jpg");
+    }
+
     @media(min-width: $width-tablet) {
       background: #ffffff url("../img/bg-inner-desktop.jpg") no-repeat 50% top;
       height: 300px;
@@ -28,6 +32,14 @@
     @media(min-width: $width-desktop) {
       background: #ffffff url("../img/bg-inner-desktop.jpg") no-repeat 50% top;
       height: 300px;
+    }
+
+    @media(min-width: $width-tablet) and (min-resolution: 2dppx) {
+      background-image: url("../img/bg-inner-desktop-2x.jpg");
+    }
+
+    @media(min-width: $width-desktop) and (min-resolution: 2dppx) {
+      background-image: url("../img/bg-inner-desktop-2x.jpg");
     }
   }
 

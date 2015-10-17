@@ -26,6 +26,10 @@
     font-size: 0;
     position: relative;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-index-2x.jpg");
+    }
+
     @media(min-width: $width-tablet) {
       background: #ffffff url("../img/bg-index-tablet.jpg") no-repeat 50% top;
       height: 512px;
@@ -34,6 +38,14 @@
     @media(min-width: $width-desktop) {
       background: #ffffff url("../img/bg-index-desktop.jpg") no-repeat 50% top;
       height: 509px;
+    }
+
+    @media(min-width: $width-tablet) and (min-resolution: 2dppx) {
+      background-image: url("../img/bg-index-tablet-2x.jpg");
+    }
+
+    @media(min-width: $width-desktop) and (min-resolution: 2dppx) {
+      background-image: url("../img/bg-index-desktop-2x.jpg");
     }
   }
 
