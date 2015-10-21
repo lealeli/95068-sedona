@@ -32,9 +32,29 @@
     line-height: 56px;
   }
 
+  &:hover:before {
+    border-color: $color-disabled;
+    background-color: $color-disabled;
+  }
+
+  &:active:before{
+    background-color: $color-checked;
+    border-color: $color-checked;
+  }
+
   input[type="radio"]:checked+&:before{
     content: '';
     background-color: $text-color-base;
+  }
+
+  input[type="radio"]:checked+&:hover:before {
+    border-color: $color-disabled;
+
+  }
+
+  input[type="radio"]:checked+&:active:before{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(213, 213, 213, 1);
   }
 }
 

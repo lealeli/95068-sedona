@@ -5,15 +5,36 @@
   margin-right: 3px;
   background-color: $bg-color-main;
 
+  &:hover {
+    background-color: $bg-color-hover;
+    color: $bg-color-main;
+  }
+
+  &:active{
+    background-color: $color-active;
+  }
+
   &--item-tw{
     background: $bg-color-main url('../img/icon-social.png') no-repeat 12px 50%;
+
+    &:active{
+      opacity: 0.3;
+    }
   }
 
   &--item-fb{
     background: $bg-color-main url('../img/icon-social.png') no-repeat 50% 50%;
+
+    &:active{
+      opacity: 0.3;
+    }
   }
 
   &--item-yt{
     background: $bg-color-main url('../img/icon-social.png') no-repeat -91px 50%;
+
+    &:active{
+      opacity: 0.3;
+    }
   }
 }

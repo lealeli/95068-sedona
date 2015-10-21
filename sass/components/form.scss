@@ -105,6 +105,14 @@
     height: 30px;
     border-radius: 50%;
 
+    &:hover{
+      background-color: $color-disabled;
+    }
+
+    &:active{
+      background-color: $color-checked;
+    }
+
     @media(min-width: $width-tablet){
       width: 60px;
       height: 60px;
@@ -112,7 +120,8 @@
       left: 110px;
     }
 
-    &:before, &:after {
+    &:before,
+    &:after {
       width: 14px;
       height: 2px;
       border-radius: 2px;
@@ -130,6 +139,16 @@
         left: 15px;
         top: 28px;
       }
+    }
+
+    &:hover:before,
+    &:hover:after {
+      opacity: 0.5;
+    }
+
+    &:active:before,
+    &:active:after {
+      opacity: 0.1;
     }
 
     &:before {

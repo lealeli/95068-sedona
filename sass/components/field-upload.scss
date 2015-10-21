@@ -9,23 +9,39 @@
   background-color: $field-form-color;
   cursor: pointer;
 
+  &:hover{
+    background-color: $color-disabled;
+  }
+
+  &:active{
+    background-color: $color-checked;
+  }
+
   @media(min-width: $width-tablet){
     width: 458px;
     margin: 61px auto 40px auto;
   }
 
   span {
-    color: $text-form-color;
-    font-size: $html-text-size*2.1;
+    color: #c6c6c6;
+    font-size: $html-text-size * 2.1;
     line-height: 58px;
     font-weight: bold;
     display: block;
     text-align: center;
   }
 
+  &:hover span{
+    color: #8c8c8c;
+  }
+
+  &:active span{
+    color: #afafaf;
+  }
+
   input[type=file]{
     position: absolute;
     top: 0;
-    opacity: 0
+    opacity: 0;
   }
 }

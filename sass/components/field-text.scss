@@ -27,6 +27,16 @@
     border: 0;
     line-height: 57px;
     padding-left: 20px;
+
+    &:hover {
+      background-color: $color-disabled;
+    }
+
+    &:focus{
+      background-color: $bg-color-base;
+      border: 4px solid $color-disabled;
+      outline: none;
+    }
   }
 
   &--center:first-of-type {

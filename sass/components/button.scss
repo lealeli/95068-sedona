@@ -11,6 +11,20 @@
   border: 0;
   text-transform: uppercase;
 
+  &:hover {
+    background-color: $bg-color-hover;
+    color: $bg-color-base;
+  }
+
+  &:active{
+    background-color: $color-active;
+    color: #94b9d2;
+  }
+
+  &--disabled {
+    background-color: $color-disabled;
+  }
+
   &--hotel {
     margin: 0 20px;
 
@@ -23,6 +37,10 @@
   &--feedback {
     margin: 0 0 120px 0;
     width: 100%;
+
+    &:focus {
+      outline: none;
+    }
 
     @media(min-width: $width-tablet) {
       width: 458px;

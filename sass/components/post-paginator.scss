@@ -27,6 +27,18 @@
     margin: 0 0 20px 0;
     font-size: $html-text-size * 2.1;
 
+    &:hover {
+      background-color: $bg-color-hover;
+      color: $bg-color-base;
+      border: none;
+    }
+
+    &:active{
+      background-color: $color-active;
+      color: #94b9d2;
+      border: none;
+    }
+
     &:nth-child(1) {
       margin-right: 6%;
 

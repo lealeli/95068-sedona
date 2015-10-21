@@ -19,6 +19,14 @@
     color: rgba(0, 0, 0, 0.3);
     font-size: $html-text-size * 2.1;
 
+    &:hover{
+      background-color: $color-disabled;
+    }
+
+    &:active{
+      background-color: $color-checked;
+    }
+
     &--minus:before, &--plus:before, &--plus:after {
       content: '';
       width: 20px;
@@ -28,6 +36,14 @@
       left: 21px;
       top: 27px;
       border-radius: 1px;
+    }
+
+    &--minus:hover:before, &--plus:hover:before, &--plus:hover:after {
+      background: #8c8c8c;
+    }
+
+    &--minus:active:before, &--plus:active:before, &--plus:active:after {
+      background: #c4c4c4;
     }
 
     &--plus:after {

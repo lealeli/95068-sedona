@@ -31,6 +31,16 @@
     margin: 0 16px 16px 0;
     font-size: $html-text-size * 2.1;
 
+    &:hover {
+      background-color: $bg-color-hover;
+      color: $bg-color-base;
+    }
+
+    &:active{
+      background-color: $color-active;
+      color: #94b9d2;
+    }
+
     @media(min-width: $width-tablet) and (max-width: $width-desktop) {
       margin: 0 16px 0 0;
     }
@@ -39,6 +49,16 @@
   &__item--active {
     background-color: #e5e5e5;
     color: $text-color-base;
+
+    &:hover {
+      background-color: #e5e5e5;
+      color: $text-color-base;
+    }
+
+    &:active{
+      background-color: #e5e5e5;
+      color: $text-color-base;
+    }
   }
 
   &__item-title {

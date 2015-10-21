@@ -53,9 +53,26 @@
     line-height: 56px;
   }
 
+  &:hover:before {
+    background-color: $color-disabled;
+  }
+
+  &:active:before{
+    background-color: $color-checked;
+  }
+
   input[type="checkbox"]:checked+&:before{
     content: '';
     background: $field-form-color url('../img/icon-checkbox.png') no-repeat 50% 50%;
+  }
+
+  input[type="checkbox"]:checked+&:hover:before {
+    background-color: $color-disabled;
+  }
+
+  input[type="checkbox"]:checked+&:active:before{
+    opacity: 0.3;
+    background-color: rgba(213, 213, 213, 1);
   }
 }
 
