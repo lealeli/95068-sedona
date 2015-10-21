@@ -164,11 +164,11 @@
     list-style-type: none;
     position: relative;
 
-    label.field-text {
+    .field-text {
       margin: 0;
       padding-left: 67px;
 
-      @media(min-width: $width-desktop) {
+      @media(min-width: $width-tablet) {
         padding: 0 20px 0 20px;
 
         &:first-of-type {
