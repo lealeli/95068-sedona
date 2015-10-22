@@ -4,7 +4,7 @@
   var toggles = document.querySelectorAll('.main-nav__toggle');
 
   for (var i = 0; i < toggles.length; i++) {
-    toggles[i].addEventListener('click', tapHandler);
+    toggles[i].addEventListener('tap', tapHandler);
   }
 
   function tapHandler(e) {
