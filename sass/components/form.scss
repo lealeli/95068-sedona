@@ -1,6 +1,14 @@
 .form {
   padding: 0 20px;
 
+  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0 122px;
+  }
+
   &__fieldset {
     position: relative;
     border: 0;
@@ -11,8 +19,10 @@
 
   &__fieldset legend {
     position: absolute;
-    top: 24px;
+    top: 21px;
+    line-height: 24px;
     width: 100%;
+    font-size: $html-text-size * 1.8;
     text-align: center;
     font-weight: bold;
 
@@ -28,6 +38,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    @media (min-width: $width-tablet) {
+      justify-content: center;
+      margin-top: 25px;
+      margin-bottom: 52px;
+    }
   }
 
   &__radio-inner {
@@ -36,24 +53,33 @@
 
     @media (min-width: $width-tablet) and (max-width: $width-desktop) {
       justify-content: space-between;
+      margin-top: 40px;
+      margin-bottom: 34px;
     }
 
     @media (min-width: $width-desktop) {
       justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 34px;
     }
   }
 
   &__checkbox-inner {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 16px;
 
     @media (min-width: $width-tablet) and (max-width: $width-desktop) {
       justify-content: center;
       flex-wrap: wrap;
+      padding-top: 42px;
+      padding-bottom: 26px;
     }
 
     @media (min-width: $width-desktop) {
       justify-content: space-between;
+      padding-top: 42px;
+      padding-bottom: 40px;
     }
   }
 
@@ -66,6 +92,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -35px;
+    margin-bottom: 13px;
 
     @media(min-width: $width-tablet){
       margin: 0 auto;
@@ -81,7 +108,7 @@
     display: inline-block;
     width: 70px;
     height: 70px;
-    margin: 0 0 45px 35px;
+    margin: 0 0 35px 35px;
     font-size: 0;
 
     @media(min-width: $width-tablet){
@@ -163,6 +190,7 @@
   &__traveler {
     list-style-type: none;
     position: relative;
+    margin-bottom: 21px;
 
     .field-text {
       margin: 0;
@@ -208,5 +236,11 @@
   &__traveler-list {
     counter-reset: list;
     padding: 0;
+    margin-top: 25px;
+
+    @media(min-width: $width-tablet) {
+      margin-top: 14px;
+      margin-bottom: 90px;
+    }
   }
 }

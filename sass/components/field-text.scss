@@ -1,5 +1,7 @@
 .field-text {
   width: 100%;
+  padding: 0 0 20px 0;
+
   @media(min-width: $width-tablet){
     width: 33%;
     padding: 0 20px 20px 20px;
@@ -24,9 +26,10 @@
     height: 57px;
     width: 100%;
     color: $text-color-base;
-    border: 0;
-    line-height: 57px;
     padding-left: 20px;
+    font-size: 16px;
+    border: none;
+
 
     &:hover {
       background-color: $color-disabled;
@@ -44,11 +47,13 @@
       padding-left: 0;
       text-align: center;
       width: 100%;
+      margin-top: 25px;
     }
 
     @media (min-width: $width-desktop) {
       padding-left: 0;
       padding-right: 40px;
+      margin-top: 25px;
     }
   }
 }

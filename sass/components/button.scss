@@ -35,7 +35,7 @@
   }
 
   &--feedback {
-    margin: 0 0 120px 0;
+    margin: 0 0 116px 0;
     width: 100%;
 
     &:focus {
@@ -44,7 +44,7 @@
 
     @media(min-width: $width-tablet) {
       width: 458px;
-      margin: 0 auto 120px auto;
+      margin: 30px auto 120px auto;
     }
   }
 
