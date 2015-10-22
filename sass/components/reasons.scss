@@ -36,8 +36,6 @@
     }
 
     &:first-child {
-      padding-top: 28px;
-
       @media(min-width: $width-tablet) {
         padding: 0;
         height: 100%;
@@ -67,7 +65,7 @@
 
   &__item-header {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 
     @media(min-width: $width-tablet) {
       padding-top: 49px;
@@ -76,12 +74,12 @@
 
   &__item-number {
     text-align: center;
-    padding-bottom: 26px;
+    padding-bottom: 15px;
   }
 
   &__item-descr {
     text-align: center;
-    padding: 0 20px 27px 20px;
+    padding: 0 20px 40px 20px;
   }
 
   &__item-photo {
@@ -169,7 +167,7 @@
   &__fact-item-header {
     padding-left: 50px;
     font-size: $font-size-header;
-    line-height: 51px;
+    line-height: 50px;
 
     @media(min-width: $width-tablet) {
       padding: 0;
