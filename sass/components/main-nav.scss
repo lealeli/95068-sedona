@@ -1,5 +1,10 @@
 .main-nav {
+  display: none;
   background-color: $text-color-secondary;
+
+  &--show {
+    display: block;
+  }
 
   @media(min-width: 768px) {
     background-color: $text-color-secondary;
@@ -53,7 +58,7 @@
 
     &:nth-child(1) {
       @media(min-width: 768px) {
-        margin-right: 10%;
+        margin-left: 10%;
       }
     }
 
@@ -121,7 +126,7 @@
 
   &__toggle {
     position: absolute;
-    top: 240px;
+    top: 15px;
     right: 20px;
     display: flex;
     align-items: center;

@@ -1,5 +1,7 @@
 .btn-social {
   display: inline-block;
+  vertical-align: middle;
+  line-height: 44px;
   width: 46px;
   height: 48px;
   margin-right: 3px;
@@ -14,27 +16,13 @@
     background-color: $color-active;
   }
 
-  &--item-tw{
-    background: $bg-color-main url('../img/icon-social.png') no-repeat 12px 50%;
-
-    &:active{
-      opacity: 0.3;
-    }
+  &:active svg {
+    opacity: 0.3;
   }
 
-  &--item-fb{
-    background: $bg-color-main url('../img/icon-social.png') no-repeat 50% 50%;
-
-    &:active{
-      opacity: 0.3;
-    }
-  }
-
-  &--item-yt{
-    background: $bg-color-main url('../img/icon-social.png') no-repeat -91px 50%;
-
-    &:active{
-      opacity: 0.3;
-    }
+  & svg {
+    display: inline-block;
+    vertical-align: middle;
+    fill: #ffffff;
   }
 }
