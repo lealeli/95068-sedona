@@ -5,10 +5,14 @@
     initNumberField(els[i]);
   }
 
+  var customEvent = new CustomEvent('change-number');
   function initNumberField(el) {
     var input = el.querySelector('input');
     var minus = el.querySelector('.field-num__item--minus');
     var plus = el.querySelector('.field-num__item--plus');
+
+    var input_max = Number(input.dataset.max) || Number.MAX_VALUE;
+    var input_min = Number(input.dataset.min) || Number.MIN_VALUE;
 
     minus.addEventListener('tap', function () {
       changeNumber(false);
@@ -30,15 +34,18 @@
         ? true : e.preventDefault();
     });
 
-    var customEvent = new CustomEvent('change-number');
-    input.addEventListener('change', function (e) {
+    input.addEventListener('change', function () {
       checkInput();
       input.dispatchEvent(customEvent);
     });
 
     function checkInput() {
-      if (input.value < 0) {
-        input.value = 0;
+      var val = Number(input.value);
+
+      if (val < input_min) {
+        input.value = input_min;
+      } else if (val > input_max) {
+        input.value = input_max;
       }
     }
 
@@ -62,6 +69,45 @@
   var imageSelector = form.querySelector('#file1');
   var ajaxImages = [];
 
+  // Валидация формы
+  var modal_failure = document.querySelector('.modal--failure');
+  var modal_success = document.querySelector('.modal--success');
+
+  var fieldsValidators = [
+    {
+      name: 'name',
+      rules: 'required'
+    },
+    {
+      name: 'surname',
+      rules: 'required'
+    },
+    {
+      name: 'date-coming',
+      rules: 'required'
+    },{
+      name: 'number-day',
+      rules: 'required|integer'
+    }
+  ];
+  var errors;
+  new FormValidator(form, fieldsValidators, function(err){
+    // reset errors & modals
+    var errorElements = document.querySelectorAll('.input--error');
+    for (var i = 0; i < errorElements.length; i++) {
+      errorElements[i].classList.remove('input--error');
+    }
+    closeModal();
+
+    errors = err;
+    if(err.length) {
+      err.forEach(function (el) {
+        el.element.classList.add('input--error');
+      });
+      modal_failure.classList.add("modal--show");
+    }
+  });
+
   // ajax отправка формы
   if ('FormData' in window) {
     function request(data, fn) {
@@ -78,6 +124,10 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
+      if (errors.length) {
+        return false;
+      }
+
       var data = new FormData(form);
 
       ajaxImages.forEach(function (el) {
@@ -85,10 +135,32 @@
       });
 
       request(data, function (response) {
+        modal_success.classList.add("modal--show");
         console.log(response);
+        form.reset();
       });
     });
   }
+
+  function closeModal() {
+    if (modal_success.classList.contains("modal--show")) {
+      modal_success.classList.remove("modal--show");
+    }
+    if (modal_failure.classList.contains("modal--show")) {
+      modal_failure.classList.remove("modal--show");
+    }
+  }
+
+  var btnEls = document.querySelectorAll('.btn--modal');
+  for (var i = 0; i < btnEls.length; i++) {
+    btnEls[i].addEventListener('tap', closeModal);
+  }
+
+  window.addEventListener("keydown", function (event) {
+    if (event.keyCode == 27) {
+      closeModal();
+    }
+  });
 
   // preview фотографий
   if ('FileReader' in window) {
@@ -154,12 +226,8 @@
 
   var travelersLength = 0;
 
-  travelerInput.addEventListener('change-number', function (e) {
+  travelerInput.addEventListener('change-number', function () {
     var length = Number(this.value);
-    if (length > 10) {
-      length = 10;
-      this.value = 10;
-    }
 
     if (travelersLength > length) {
       for(var i = length; i < travelersLength; i++) {
@@ -181,6 +249,8 @@
 
     travelersLength = length;
   });
+
+  travelerInput.dispatchEvent(customEvent); // init
 
   // Даты
   var date_coming = document.querySelector('#date-coming');

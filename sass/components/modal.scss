@@ -1,6 +1,7 @@
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 100px;
   width: 100%;
   height: auto;
   z-index: 10;
@@ -8,6 +9,17 @@
   text-align: center;
   text-transform: uppercase;
   padding-top: 42px;
+  box-shadow: 0 7px 15px 0 rgba(0,0,0,0.15);
+
+  @media(min-width: $width-tablet) {
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+  }
+
+  &--show {
+    display: block;
+  }
 
   &__title {
     display: inline-block;

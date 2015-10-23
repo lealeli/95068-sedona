@@ -89,7 +89,7 @@
         color: rgba(255, 255, 255, 0.3);
       }
 
-      @media(min-width: 768px) {
+      @media(min-width: $width-tablet) {
         color: $text-color-base;
         font-size: $font-size;
 

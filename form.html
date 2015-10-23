@@ -75,7 +75,7 @@
       <div class="form__fieldset-inner">
         <label class="field-text">
           <span class="field-text__title">Фамилия:&nbsp;<span class="form__required">*</span></span>
-          <input type="text" name="surname" placeholder="Иванов" required>
+          <input type="text" name="surname" placeholder="Иванов">
         </label>
         <label class="field-text"><span class="field-text__title">Имя:&nbsp;<span class="form__required">*</span></span>
           <input type="text" name="name" placeholder="Петр" required>
@@ -114,7 +114,7 @@
           <span class="field-text__title">Дней пребывания:&nbsp;<span class="form__required">*</span></span>
           <div class="field-num">
             <span class="field-num__item field-num__item--minus"></span>
-            <input id="number-day" type="text" name="number-day" required>
+            <input id="number-day" data-min="1" data-max="365" type="text" name="number-day" required>
             <span class="field-num__item field-num__item--plus"></span>
           </div>
         </label>
@@ -132,7 +132,7 @@
         <span class="field-text__title">Количество путешественников:&nbsp;<span class="form__required">*</span></span>
         <div class="field-num field-num--center">
           <span class="field-num__item field-num__item--minus"></span>
-          <input id="number-traveler" type="text" name="number-traveler" required>
+          <input id="number-traveler" data-min="1" data-max="10" value="1" type="text" name="number-traveler" required>
           <span class="field-num__item field-num__item--plus"></span>
         </div>
       </label>
@@ -230,6 +230,7 @@
 
   <script id="preview-template" type="x-tmpl-mustache">
     <img src="{{src}}" width="70" height="70"  alt="{{alt}}"/>
+    <span class="form__photo-preview-descr">{{alt}}</span>
     <div class="form__photo-preview-delete"></div>
   </script>
   <script id="traveler-template" type="x-tmpl-mustache">
@@ -248,6 +249,7 @@
   <script src="bower_components/moment/min/moment-with-locales.min.js"></script>
   <script src="bower_components/pikaday/pikaday.js"></script>
   <script src="bower_components/mustache.js/mustache.min.js"></script>
+  <script src="bower_components/validatejs/validate.min.js"></script>
   <script src="js/form.js"></script>
 
 </body>
