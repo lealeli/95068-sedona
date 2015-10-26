@@ -5,14 +5,23 @@
     initNumberField(els[i]);
   }
 
-  var customEvent = new CustomEvent('change-number');
+  function getDataAttribute(node, name) {
+    if(node.dataset !== undefined) {
+      return node.dataset[name];
+    } else {
+      return node.getAttribute('data-' + name);
+    }
+  }
+
+  var customEvent = document.createEvent("CustomEvent");
+  customEvent.initCustomEvent('change-number', false, false, {});
   function initNumberField(el) {
     var input = el.querySelector('input');
     var minus = el.querySelector('.field-num__item--minus');
     var plus = el.querySelector('.field-num__item--plus');
 
-    var input_max = Number(input.dataset.max) || Number.MAX_VALUE;
-    var input_min = Number(input.dataset.min) || Number.MIN_VALUE;
+    var input_max = Number(getDataAttribute(input, 'max')) || Number.MAX_VALUE;
+    var input_min = Number(getDataAttribute(input, 'min')) || Number.MIN_VALUE;
 
     minus.addEventListener('tap', function () {
       changeNumber(false);
