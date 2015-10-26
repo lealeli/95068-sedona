@@ -12,15 +12,29 @@
     background-color: $field-form-color;
     height: 58px;
     width: 61px;
-    text-align: center;
+    text-align: right;
     line-height: 58px;
-    margin-right: 4px;
+    padding-right: 50px;
     text-transform: none;
     color: rgba(0, 0, 0, 0.3);
     font-size: $html-text-size * 2.1;
 
     &:hover{
       background-color: $color-disabled;
+    }
+
+    &--inner {
+      position: relative;
+      margin-right: 4px;
+    }
+
+    &--text {
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      font-size: $html-text-size * 1.8;
+      text-transform: none;
+      color: rgba(0, 0, 0, 0.3);
     }
 
     &:active{

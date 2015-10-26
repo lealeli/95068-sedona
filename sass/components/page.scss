@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: $html-text-size;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 *, :before, :after {

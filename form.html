@@ -114,7 +114,10 @@
           <span class="field-text__title">Дней пребывания:&nbsp;<span class="form__required">*</span></span>
           <div class="field-num">
             <span class="field-num__item field-num__item--minus"></span>
-            <input id="number-day" data-min="1" data-max="365" type="text" name="number-day" required>
+            <div class="field-num__item--inner">
+              <input id="number-day" data-min="1" data-max="365" type="text" name="number-day" required>
+              <span class="field-num__item--text">дн.</span>
+            </div>
             <span class="field-num__item field-num__item--plus"></span>
           </div>
         </label>
@@ -132,7 +135,10 @@
         <span class="field-text__title">Количество путешественников:&nbsp;<span class="form__required">*</span></span>
         <div class="field-num field-num--center">
           <span class="field-num__item field-num__item--minus"></span>
-          <input id="number-traveler" data-min="1" data-max="10" value="1" type="text" name="number-traveler" required>
+          <div class="field-num__item--inner">
+            <input id="number-traveler" data-min="1" data-max="10" value="1" type="text" name="number-traveler" required>
+            <span class="field-num__item--text">чел.</span>
+          </div>
           <span class="field-num__item field-num__item--plus"></span>
         </div>
       </label>
@@ -229,7 +235,7 @@
   <script src="js/script.js"></script>
 
   <script id="preview-template" type="x-tmpl-mustache">
-    <img src="{{src}}" width="70" height="70"  alt="{{alt}}"/>
+  <span class="form__photo-preview-img" style="background-image: url('{{src}}');"></span>
     <span class="form__photo-preview-descr">{{alt}}</span>
     <div class="form__photo-preview-delete"></div>
   </script>
