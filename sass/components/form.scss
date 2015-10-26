@@ -29,10 +29,13 @@
     padding: 0 20px;
 
     @media(min-width: $width-tablet){
-      width: 400px;
-      position: initial;
-      font-size: $html-text-size * 2.1;
+      font-size: 21px;
       line-height: 26px;
+      width: 400px;
+      top: -15px;
+      background: #ffffff;
+      left: 50%;
+      margin-left: -200px;
     }
   }
 
