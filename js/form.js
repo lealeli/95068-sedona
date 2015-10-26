@@ -23,10 +23,10 @@
     var input_max = Number(getDataAttribute(input, 'max')) || Number.MAX_VALUE;
     var input_min = Number(getDataAttribute(input, 'min')) || Number.MIN_VALUE;
 
-    minus.addEventListener('tap', function () {
+    minus.addEventListener('click', function () {
       changeNumber(false);
     });
-    plus.addEventListener('tap', function () {
+    plus.addEventListener('click', function () {
       changeNumber(true);
     });
 
@@ -162,7 +162,7 @@
 
   var btnEls = document.querySelectorAll('.btn--modal');
   for (var i = 0; i < btnEls.length; i++) {
-    btnEls[i].addEventListener('tap', closeModal);
+    btnEls[i].addEventListener('click', closeModal);
   }
 
   window.addEventListener("keydown", function (event) {
@@ -191,7 +191,7 @@
           var div = document.createElement('div');
           div.classList.add('form__photo-preview');
           div.innerHTML = htmlPreview;
-          div.querySelector('.form__photo-preview-delete').addEventListener('tap', function (e) {
+          div.querySelector('.form__photo-preview-delete').addEventListener('click', function (e) {
             e.preventDefault();
             removePreview(div);
           });

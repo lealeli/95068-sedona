@@ -89,7 +89,7 @@
 
   &__item-descr {
     text-align: center;
-    padding: 0 20px 26px 20px;
+    padding: 0 10px 26px 10px;
   }
 
   &__item-photo {
@@ -139,6 +139,7 @@
     @media(min-width: $width-tablet) {
       padding: 90px 30px 0 30px;
       display: inline-block;
+      vertical-align: middle;
       width: 33%;
       text-align: center;
     }
@@ -146,7 +147,7 @@
 
     &--icon-house {
       background: $text-color-secondary url('../img/icon-house.svg') no-repeat 0 0;
-      background-size: 34px, 34px;
+      background-size: 37px, 37px;
 
       @media(min-width: $width-tablet) {
         background: $text-color-secondary url('../img/icon-house.svg') no-repeat top center;
@@ -157,7 +158,7 @@
 
     &--icon-gift {
       background: $text-color-secondary url('../img/icon-gift.svg') no-repeat 0 0;
-      background-size: 34px, 34px;
+      background-size: 37px, 37px;
 
       @media(min-width: $width-tablet) {
         background: $text-color-secondary url('../img/icon-gift.svg') no-repeat  top center;
@@ -167,8 +168,8 @@
     }
 
     &--icon-food {
-      background: $text-color-secondary url('../img/icon-burger.svg') no-repeat 0 0;
-      background-size: 34px, 34px;
+      background: #ffffff url("../img/icon-burger.svg") no-repeat -2px 5px;
+      background-size: 37px, 37px;
 
       @media(min-width: $width-tablet) {
         background: $text-color-secondary url('../img/icon-burger.svg') no-repeat  top center;
@@ -182,7 +183,7 @@
   &__fact-item-header {
     padding-left: 50px;
     font-size: $font-size-header;
-    line-height: 50px;
+    line-height: 45px;
 
     @media(min-width: $width-tablet) {
       padding: 0;
@@ -190,8 +191,7 @@
   }
 
   &__fact-item-descr {
-    padding-left: 50px;
-    padding-bottom: 18px;
+    padding: 4px 25px 18px 48px;
     line-height: 1.5em;
 
     @media(min-width: $width-tablet) {

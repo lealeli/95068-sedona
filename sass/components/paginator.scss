@@ -13,6 +13,7 @@
 
   &__list {
     display: inline-block;
+    vertical-align: middle;
 
     @media(min-width: $width-desktop) {
       width: 33%;
@@ -21,6 +22,7 @@
 
   &__item {
     display: inline-block;
+    vertical-align: middle;
     width: 58px;
     height: 58px;
     background-color: $bg-color-main;

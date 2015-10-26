@@ -12,7 +12,7 @@
   &__header {
     font-size: $html-text-size*2.1;
     text-align: center;
-    padding: 25px 0 18px 0;
+    padding: 27px 0 18px 0;
 
     @media(min-width: $width-tablet) {
       font-size: $html-text-size * 3;
@@ -22,7 +22,7 @@
 
   &__descr {
     text-align: center;
-    padding-bottom: 35px;
+    padding: 0 20px 35px 20px;
     line-height: 24px;
 
     @media(min-width: $width-tablet) {
