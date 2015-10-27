@@ -4,7 +4,8 @@
   font-family: "PT Sans";
   font-style: normal;
 
-  src: url("../fonts/PTSans-cyrillic-400.woff2");
+  src: url("../fonts/PTSans-cyrillic-400.woff2") format("woff2"),
+  url("../fonts/PTSans-400.woff") format("woff");
 }
 
 /* latin */
@@ -13,7 +14,8 @@
   font-family: "PT Sans";
   font-style: normal;
 
-  src: url("../fonts/PTSans-latin-400.woff2");
+  src: url("../fonts/PTSans-latin-400.woff2") format("woff2"),
+  url("../fonts/PTSans-400.woff") format("woff");
 }
 
 /* cyrillic */
@@ -22,7 +24,8 @@
   font-family: "PT Sans";
   font-style: normal;
 
-  src: url("../fonts/PTSans-cyrillic-700.woff2");
+  src: url("../fonts/PTSans-cyrillic-700.woff2") format("woff2"),
+  url("../fonts/PTSans-700.woff") format("woff");
 }
 
 /* latin */
@@ -31,7 +34,8 @@
   font-family: "PT Sans";
   font-style: normal;
 
-  src: url("../fonts/PTSans-latin-700.woff2");
+  src: url("../fonts/PTSans-latin-700.woff2") format("woff2"),
+  url("../fonts/PTSans-700.woff") format("woff");
 }
 
 /* cyrillic */
@@ -40,7 +44,8 @@
   font-family: "PT Sans";
   font-style: italic;
 
-  src: url("../fonts/PTSans-cyrillic-italik-400.woff2");
+  src: url("../fonts/PTSans-cyrillic-italik-400.woff2") format("woff2"),
+  url("../fonts/PTSans-italik-400.woff") format("woff");
 }
 
 /* latin */
@@ -49,5 +54,6 @@
   font-family: "PT Sans";
   font-style: italic;
 
-  src: url("../fonts/PTSans-latin-italik-400.woff2");
+  src: url("../fonts/PTSans-latin-italik-400.woff2") format("woff2"),
+  url("../fonts/PTSans-italik-400.woff") format("woff");
 }

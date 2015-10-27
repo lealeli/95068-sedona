@@ -121,8 +121,8 @@
     min-height: 255px;
 
     background: url("../img/photo-city-tablet.jpg") no-repeat 100% 0;
-    background-size: auto 255px;
     background-position-x: 50%;
+    background-size: auto 255px;
 
     @media (-webkit-min-device-pixel-ratio: 1.5),
     (min-resolution: 144dpi) {
@@ -149,8 +149,8 @@
 
   &__item:nth-child(2) &__item-photo {
     background: url("../img/photo-bridge-tablet.jpg") no-repeat 0 0;
-    background-size: auto 255px;
     background-position-x: 50%;
+    background-size: auto 255px;
 
     @media (-webkit-min-device-pixel-ratio: 1.5),
     (min-resolution: 144dpi) {
