@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма отзыва</title>
+  <!-- build:css css/style.min.css -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- /build -->
 </head>
 <body>
 <svg style="display: none">
@@ -236,13 +238,13 @@
   </footer>
 </div>
 
-  <script src="js/script.js"></script>
 
   <script id="preview-template" type="x-tmpl-mustache">
   <span class="form__photo-preview-img" style="background-image: url('{{src}}');"></span>
     <span class="form__photo-preview-descr">{{alt}}</span>
     <div class="form__photo-preview-delete"></div>
   </script>
+
   <script id="traveler-template" type="x-tmpl-mustache">
       <label class="field-text">
             <span class="field-text__title">Фамилия:&nbsp;<span class="form__required">*</span></span>
@@ -256,11 +258,15 @@
             <input type="text" name="traveler_{{key}}_patronymic" placeholder="Александрович">
           </label>
   </script>
+
+<!-- build:js js/script.min.js -->
   <script src="bower_components/moment/min/moment-with-locales.min.js"></script>
   <script src="bower_components/pikaday/pikaday.js"></script>
   <script src="bower_components/mustache.js/mustache.min.js"></script>
   <script src="bower_components/validatejs/validate.min.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/form.js"></script>
+<!-- /build -->
 
 </body>
 </html>

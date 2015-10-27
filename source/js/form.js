@@ -75,214 +75,217 @@
   }
 
   var form = document.querySelector('.form');
-  var imageSelector = form.querySelector('#file1');
-  var ajaxImages = [];
+  if (form) {
+    var imageSelector = form.querySelector('#file1');
+    var ajaxImages = [];
 
-  // Валидация формы
-  var modal_failure = document.querySelector('.modal--failure');
-  var modal_success = document.querySelector('.modal--success');
+    // Валидация формы
+    var modal_failure = document.querySelector('.modal--failure');
+    var modal_success = document.querySelector('.modal--success');
 
-  var fieldsValidators = [
-    {
-      name: 'name',
-      rules: 'required'
-    },
-    {
-      name: 'surname',
-      rules: 'required'
-    },
-    {
-      name: 'date-coming',
-      rules: 'required'
-    },{
-      name: 'number-day',
-      rules: 'required|integer'
-    }
-  ];
-  var errors;
-  new FormValidator(form, fieldsValidators, function(err){
-    // reset errors & modals
-    var errorElements = document.querySelectorAll('.input--error');
-    for (var i = 0; i < errorElements.length; i++) {
-      errorElements[i].classList.remove('input--error');
-    }
-    closeModal();
+    var fieldsValidators = [
+      {
+        name: 'name',
+        rules: 'required'
+      },
+      {
+        name: 'surname',
+        rules: 'required'
+      },
+      {
+        name: 'date-coming',
+        rules: 'required'
+      }, {
+        name: 'number-day',
+        rules: 'required|integer'
+      }
+    ];
+    var errors;
+    new FormValidator(form, fieldsValidators, function (err) {
+      // reset errors & modals
+      var errorElements = document.querySelectorAll('.input--error');
+      for (var i = 0; i < errorElements.length; i++) {
+        errorElements[i].classList.remove('input--error');
+      }
+      closeModal();
 
-    errors = err;
-    if(err.length) {
-      err.forEach(function (el) {
-        el.element.classList.add('input--error');
-      });
-      modal_failure.classList.add("modal--show");
-    }
-  });
+      errors = err;
+      if (err.length) {
+        err.forEach(function (el) {
+          el.element.classList.add('input--error');
+        });
+        modal_failure.classList.add("modal--show");
+      }
+    });
 
-  // ajax отправка формы
-  if ('FormData' in window) {
-    function request(data, fn) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('post', 'https://echo.htmlacademy.ru/adaptive?' + (new Date()).getTime());
-      xhr.addEventListener('readystatechange', function () {
-        if (xhr.readyState == 4) {
-          fn(xhr.responseText);
-        }
-      });
-      xhr.send(data);
-    }
-
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      if (errors.length) {
-        return false;
+    // ajax отправка формы
+    if ('FormData' in window) {
+      function request(data, fn) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', 'https://echo.htmlacademy.ru/adaptive?' + (new Date()).getTime());
+        xhr.addEventListener('readystatechange', function () {
+          if (xhr.readyState == 4) {
+            fn(xhr.responseText);
+          }
+        });
+        xhr.send(data);
       }
 
-      var data = new FormData(form);
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-      ajaxImages.forEach(function (el) {
-        data.append(imageSelector.name, el.file);
-      });
+        if (errors.length) {
+          return false;
+        }
 
-      request(data, function (response) {
-        modal_success.classList.add("modal--show");
-        console.log(response);
-        form.reset();
-      });
-    });
-  }
+        var data = new FormData(form);
 
-  function closeModal() {
-    if (modal_success.classList.contains("modal--show")) {
-      modal_success.classList.remove("modal--show");
-    }
-    if (modal_failure.classList.contains("modal--show")) {
-      modal_failure.classList.remove("modal--show");
-    }
-  }
-
-  var btnEls = document.querySelectorAll('.btn--modal');
-  for (var i = 0; i < btnEls.length; i++) {
-    btnEls[i].addEventListener('click', closeModal);
-  }
-
-  window.addEventListener("keydown", function (event) {
-    if (event.keyCode == 27) {
-      closeModal();
-    }
-  });
-
-  // preview фотографий
-  if ('FileReader' in window) {
-    var photoPreviews = form.querySelector('.form__photo-previews');
-
-    var previewTemplate = document.querySelector('#preview-template').innerHTML;
-    Mustache.parse(previewTemplate);
-
-    function preview(file) {
-      if (file.type.match(/image.*/)) {
-        var reader = new FileReader();
-
-        reader.addEventListener('load', function (event) {
-          var htmlPreview = Mustache.render(previewTemplate, {
-            'src': event.target.result,
-            'alt': file.name
-          });
-
-          var div = document.createElement('div');
-          div.classList.add('form__photo-preview');
-          div.innerHTML = htmlPreview;
-          div.querySelector('.form__photo-preview-delete').addEventListener('click', function (e) {
-            e.preventDefault();
-            removePreview(div);
-          });
-
-          photoPreviews.appendChild(div);
-
-          ajaxImages.push({
-            file: file,
-            div: div
-          })
+        ajaxImages.forEach(function (el) {
+          data.append(imageSelector.name, el.file);
         });
 
-        reader.readAsDataURL(file);
-      }
-    }
-
-    function removePreview(div) {
-      ajaxImages = ajaxImages.filter(function (element) {
-        return element.div != div;
+        request(data, function (response) {
+          modal_success.classList.add("modal--show");
+          console.log(response);
+          form.reset();
+        });
       });
-
-      div.parentNode.removeChild(div);
     }
 
-    imageSelector.addEventListener('change', function () {
-      var files = this.files;
-
-      for (var i = 0; i < files.length; i++) {
-        preview(files[i]);
+    function closeModal() {
+      if (modal_success.classList.contains("modal--show")) {
+        modal_success.classList.remove("modal--show");
       }
-      this.value = '';
+      if (modal_failure.classList.contains("modal--show")) {
+        modal_failure.classList.remove("modal--show");
+      }
+    }
+
+    var btnEls = document.querySelectorAll('.btn--modal');
+    for (var i = 0; i < btnEls.length; i++) {
+      btnEls[i].addEventListener('click', closeModal);
+    }
+
+    window.addEventListener("keydown", function (event) {
+      if (event.keyCode == 27) {
+        closeModal();
+      }
     });
 
-  }
+    // preview фотографий
+    if ('FileReader' in window) {
+      var photoPreviews = form.querySelector('.form__photo-previews');
 
-  // Путешествиники
-  var travelerInput = document.querySelector('#number-traveler');
-  var travelerList = document.querySelector('.form__traveler-list');
-  var travelerTemplate = document.querySelector('#traveler-template').innerHTML;
-  Mustache.parse(travelerTemplate);
+      var previewTemplate = document.querySelector('#preview-template').innerHTML;
+      Mustache.parse(previewTemplate);
 
-  var travelersLength = 0;
+      function preview(file) {
+        if (file.type.match(/image.*/)) {
+          var reader = new FileReader();
 
-  travelerInput.addEventListener('change-number', function () {
-    var length = Number(this.value);
+          reader.addEventListener('load', function (event) {
+            var htmlPreview = Mustache.render(previewTemplate, {
+              'src': event.target.result,
+              'alt': file.name
+            });
 
-    if (travelersLength > length) {
-      for(var i = length; i < travelersLength; i++) {
-        var li = document.querySelector('#traveler_' + i);
-        li.parentNode.removeChild(li);
+            var div = document.createElement('div');
+            div.classList.add('form__photo-preview');
+            div.innerHTML = htmlPreview;
+            div.querySelector('.form__photo-preview-delete').addEventListener('click', function (e) {
+              e.preventDefault();
+              removePreview(div);
+            });
+
+            photoPreviews.appendChild(div);
+
+            ajaxImages.push({
+              file: file,
+              div: div
+            })
+          });
+
+          reader.readAsDataURL(file);
+        }
       }
-    } else {
-      for (var i = travelersLength; i < length; i++) {
-        var htmlPreview = Mustache.render(travelerTemplate, {key: i});
 
-        var li = document.createElement('li');
-        li.id = 'traveler_' + i;
-        li.classList.add('form__traveler');
-        li.innerHTML = htmlPreview;
+      function removePreview(div) {
+        ajaxImages = ajaxImages.filter(function (element) {
+          return element.div != div;
+        });
 
-        travelerList.appendChild(li);
+        div.parentNode.removeChild(div);
+      }
+
+      imageSelector.addEventListener('change', function () {
+        var files = this.files;
+
+        for (var i = 0; i < files.length; i++) {
+          preview(files[i]);
+        }
+        this.value = '';
+      });
+
+    }
+
+    // Путешествиники
+    var travelerInput = document.querySelector('#number-traveler');
+    var travelerList = document.querySelector('.form__traveler-list');
+    var travelerTemplate = document.querySelector('#traveler-template').innerHTML;
+    Mustache.parse(travelerTemplate);
+
+    var travelersLength = 0;
+
+    travelerInput.addEventListener('change-number', function () {
+      var length = Number(this.value);
+
+      if (travelersLength > length) {
+        for (var i = length; i < travelersLength; i++) {
+          var li = document.querySelector('#traveler_' + i);
+          li.parentNode.removeChild(li);
+        }
+      } else {
+        for (var i = travelersLength; i < length; i++) {
+          var htmlPreview = Mustache.render(travelerTemplate, {key: i});
+
+          var li = document.createElement('li');
+          li.id = 'traveler_' + i;
+          li.classList.add('form__traveler');
+          li.innerHTML = htmlPreview;
+
+          travelerList.appendChild(li);
+        }
+      }
+
+      travelersLength = length;
+    });
+
+    travelerInput.dispatchEvent(customEvent); // init
+
+    // Даты
+    var date_coming = document.querySelector('#date-coming');
+    var date_leave = document.querySelector('#date-leave');
+    var number_day = document.querySelector('#number-day');
+    moment.locale('ru');
+
+    var picker = new Pikaday({
+      field: date_coming,
+      format: 'LL',
+      onSelect: changeLeaveDate
+    });
+    number_day.addEventListener('change-number', changeLeaveDate);
+
+    function changeLeaveDate() {
+      var start = picker.getMoment();
+      var days = Number(number_day.value);
+      var rawValue = date_coming.value;
+      if (rawValue != '' && days) {
+        date_leave.value = start.add(days, 'd').format('LL');
+      } else {
+        date_leave.value = '';
       }
     }
 
-    travelersLength = length;
-  });
-
-  travelerInput.dispatchEvent(customEvent); // init
-
-  // Даты
-  var date_coming = document.querySelector('#date-coming');
-  var date_leave = document.querySelector('#date-leave');
-  var number_day = document.querySelector('#number-day');
-  moment.locale('ru');
-
-  var picker = new Pikaday({
-    field: date_coming,
-    format: 'LL',
-    onSelect: changeLeaveDate
-  });
-  number_day.addEventListener('change-number', changeLeaveDate);
-
-  function changeLeaveDate() {
-    var start = picker.getMoment();
-    var days = Number(number_day.value);
-    var rawValue = date_coming.value;
-    if (rawValue != '' && days) {
-      date_leave.value = start.add(days, 'd').format('LL');
-    } else {
-      date_leave.value = '';
-    }
   }
 
 })();
