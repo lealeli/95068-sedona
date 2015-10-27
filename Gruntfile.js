@@ -78,7 +78,8 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      build: ['build']
+      build: ['build'],
+      bower: ['build/js/bower.js', 'build/css/bower.css']
     },
 
     copy: {
@@ -166,7 +167,7 @@ module.exports = function(grunt) {
   };
 
   grunt.registerTask('build', [
-    'clean',
+    'clean:build',
     'copy',
     'sass:style',
     'cmq',
@@ -179,7 +180,8 @@ module.exports = function(grunt) {
     'cssmin',
     'imagemin',
     'htmlmin',
-    'uglify'
+    'uglify',
+    'clean:bower',
   ]);
 
 
