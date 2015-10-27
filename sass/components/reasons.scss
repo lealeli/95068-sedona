@@ -15,19 +15,23 @@
       width: 33%;
       flex-direction: row;
       flex-wrap: wrap;
-      height: 255px;
+      min-height: 255px;
       flex-grow: 1;
     }
 
     &--bg-blue &-descr {
       text-align: center;
-      padding: 0 20px 40px 20px;
+      padding: 0 45px 40px 45px;
+
+      @media(min-width: $width-tablet) {
+        padding: 0 65px 40px 65px;
+      }
     }
 
     &--bg-blue {
       padding: 40px 0 0 0;
       background-color: $bg-color-main;
-      color: $text-color-secondary;
+      color: $bg-color-base;
 
       @media(min-width: $width-tablet) {
         padding: 0;
@@ -63,17 +67,24 @@
     }
   }
 
+  &__item--bg-blue &__item-header {
+    @media(min-width: $width-desktop) {
+      padding: 50px 110px 10px 110px;
+    }
+  }
+
   &__item-header {
     text-align: center;
     padding-bottom: 10px;
 
     @media(min-width: $width-tablet) {
-      padding: 42px 51px 10px 51px;
       font-size: $html-text-size * 2.1;
+      padding: 45px 51px 10px 51px;
+      line-height: 1.3em;
     }
 
     @media(min-width: $width-desktop) {
-      padding: 45px 120px 10px 120px;
+      padding: 46px 120px 10px 120px;
       line-height: 26px;
     }
   }
@@ -90,11 +101,15 @@
   &__item-descr {
     text-align: center;
     padding: 0 10px 26px 10px;
+
+    @media(min-width: $width-tablet) {
+      padding: 0 49px 26px 49px;
+    }
   }
 
   &__item-photo {
     width: 100%;
-    height: 255px;
+    min-height: 255px;
     background: url('../img/photo-city.jpg') no-repeat 100% 0;
 
     @media (min-resolution: 2dppx) {
@@ -124,12 +139,12 @@
 
   &__fact {
     padding: 30px 20px 20px 20px;
-    background-color: $text-color-secondary;
+    background-color: $bg-color-base;
     color: $text-color-base;
 
     @media(min-width: $width-tablet) {
       padding: 58px 0 0 0;
-      height: 330px;
+      min-height: 330px;
       display: flex;
       justify-content: space-around;
     }
@@ -146,22 +161,22 @@
 
 
     &--icon-house {
-      background: $text-color-secondary url('../img/icon-house.svg') no-repeat 0 0;
+      background: $bg-color-base url('../img/icon-house.svg') no-repeat 0 0;
       background-size: 37px, 37px;
 
       @media(min-width: $width-tablet) {
-        background: $text-color-secondary url('../img/icon-house.svg') no-repeat top center;
+        background: $bg-color-base url('../img/icon-house.svg') no-repeat top center;
         background-size: 74px, 74px;
         order: 1;
       }
     }
 
     &--icon-gift {
-      background: $text-color-secondary url('../img/icon-gift.svg') no-repeat 0 0;
+      background: $bg-color-base url('../img/icon-gift.svg') no-repeat 0 0;
       background-size: 37px, 37px;
 
       @media(min-width: $width-tablet) {
-        background: $text-color-secondary url('../img/icon-gift.svg') no-repeat  top center;
+        background: $bg-color-base url('../img/icon-gift.svg') no-repeat  top center;
         background-size: 74px, 74px;
         order: 2;
       }
@@ -172,7 +187,7 @@
       background-size: 37px, 37px;
 
       @media(min-width: $width-tablet) {
-        background: $text-color-secondary url('../img/icon-burger.svg') no-repeat  top center;
+        background: $bg-color-base url('../img/icon-burger.svg') no-repeat  top center;
         background-size: 74px, 74px;
         order: 1;
       }
@@ -187,6 +202,7 @@
 
     @media(min-width: $width-tablet) {
       padding: 0;
+      font-size: $html-text-size * 2.1;
     }
   }
 
@@ -195,13 +211,13 @@
     line-height: 1.5em;
 
     @media(min-width: $width-tablet) {
-      padding: 0;
-      margin-top: 10px;
+      padding: 0 14px 0 14px;
+      margin-top: 14px;
     }
   }
 
   &__line {
-    color: $line-color;
+    border-color: #d6d6d6;
     width: 100%;
     margin: 0 auto;
 

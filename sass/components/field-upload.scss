@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   overflow: hidden;
-  margin: 61px 0 49px 0;
+  margin: 61px 0 57px 0;
   height: 58px;
   width: 100%;
   line-height: 58px;
@@ -20,11 +20,11 @@
   &:first-of-type {
     @media(min-width: $width-tablet){
       width: 458px;
-      margin: 61px auto 40px auto;
+      margin: 70px auto 86px auto;
     }
 
     @media(min-width: $width-desktop){
-      margin: 61px auto 86px auto;
+      margin: 71px auto 86px auto;
     }
   }
 

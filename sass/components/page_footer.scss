@@ -1,19 +1,25 @@
 .page-footer {
+  background-color: $bg-color-base;
+
 
   &__inner {
-    margin-bottom: 23px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 32px;
 
     @media(min-width: $width-tablet) {
       flex-direction: row;
       align-items: center;
-      margin: 0 37px 38px 10px;
+      margin: 0 37px 0 10px;
+      padding-bottom: 38px;
+    }
+
+    @media(min-width: $width-desktop) {
+      padding: 105px 0 23px 0;
+      margin-bottom: 0;
     }
   }
 
-  &__social {
-  }
 
   &__search-link {
     display: block;
@@ -62,6 +68,7 @@
     @media(min-width: $width-tablet) {
       width: 33%;
       text-align: right;
+      padding: 0;
     }
   }
 }

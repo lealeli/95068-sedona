@@ -1,7 +1,5 @@
 .promo-sedona {
-
-  &__inner {
-  }
+  background-color: $bg-color-base;
 
   &__about {
     &:after {
@@ -27,7 +25,8 @@
     font-size: 0;
     position: relative;
 
-    @media (min-resolution: 2dppx) {
+    @media (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi) {
       background-image: url("../img/bg-index-2x.jpg");
     }
 
@@ -42,11 +41,13 @@
       height: 509px;
     }
 
-    @media(min-width: $width-tablet) and (min-resolution: 2dppx) {
+    @media(-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-tablet),
+    (min-resolution: 144dpi) and (min-width: $width-tablet) {
       background-image: url("../img/bg-index-tablet-2x.jpg");
     }
 
-    @media(min-width: $width-desktop) and (min-resolution: 2dppx) {
+    @media(-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-desktop),
+    (min-resolution: 144dpi) and (min-width: $width-desktop) {
       background-image: url("../img/bg-index-desktop-2x.jpg");
     }
   }

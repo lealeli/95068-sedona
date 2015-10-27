@@ -1,13 +1,13 @@
 .main-nav {
   display: none;
-  background-color: $text-color-secondary;
+  background-color: $bg-color-base;
 
   &--show {
     display: block;
   }
 
   @media(min-width: 768px) {
-    background-color: $text-color-secondary;
+    background-color: $bg-color-base;
     display: block;
   }
 
@@ -71,7 +71,7 @@
       width: 100%;
       height: 56px;
 
-      color: $text-color-secondary;
+      color: $bg-color-base;
       font-size: $font-size-header;
       font-weight: bold;
       text-align: center;

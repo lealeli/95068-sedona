@@ -1,7 +1,8 @@
 .form {
-  padding: 0 20px;
+  padding: 0;
+  background-color: $bg-color-base;
 
-  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+  @media (min-width: $width-tablet) {
     padding: 0 60px;
   }
 
@@ -13,20 +14,23 @@
     position: relative;
     border: 0;
     border-top: 1px solid #9ac2db;
-    padding: 0;
     margin: 0;
+    padding: 0 20px;
+
+    @media(min-width: $width-tablet) {
+      padding: 0;
+    }
   }
 
   &__fieldset legend {
     position: absolute;
     top: 21px;
     line-height: 24px;
-    width: 100%;
+    width: 280px;
     font-size: $html-text-size * 1.8;
     text-align: center;
     font-weight: bold;
     margin: 0 auto;
-    padding: 0 20px;
 
     @media(min-width: $width-tablet){
       font-size: 21px;
@@ -44,54 +48,58 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin: 68px 0 8px 0;
 
     @media (min-width: $width-tablet) {
       justify-content: center;
-      margin-top: 25px;
-      margin-bottom: 52px;
+      margin: 36px 0 59px 0;
     }
   }
 
   &__radio-inner {
     display: flex;
     flex-wrap: wrap;
+    margin: 67px 0 8px 0;
 
-    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+    @media (min-width: $width-tablet) {
       justify-content: space-between;
-      margin-top: 40px;
-      margin-bottom: 34px;
+      margin-top: 52px;
+      margin-bottom: 54px;
     }
 
     @media (min-width: $width-desktop) {
       justify-content: center;
-      margin-top: 40px;
-      margin-bottom: 34px;
+      margin-top: 54px;
+      margin-bottom: 52px;
     }
   }
 
   &__checkbox-inner {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 16px;
+    padding-top: 86px;
 
-    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+    @media (min-width: $width-tablet) {
       justify-content: center;
       flex-wrap: wrap;
-      padding-top: 42px;
-      padding-bottom: 26px;
+      padding-top: 67px;
+      padding-bottom: 42px;
     }
 
     @media (min-width: $width-desktop) {
       justify-content: space-between;
-      padding-top: 42px;
-      padding-bottom: 40px;
+      padding-top: 72px;
+      padding-bottom: 57px;
     }
   }
 
   &__required {
     color: $required-color;
     margin-right: 15px;
+
+    @media(min-width: $width-desktop){
+      margin: 0;
+    }
   }
 
   &__photo-previews {
@@ -121,7 +129,11 @@
     @media(min-width: $width-tablet){
       width: 140px;
       height: 140px;
-      margin-left: 64px;
+      margin: 0 30px 69px 35px;
+    }
+
+    @media(min-width: $width-tablet){
+      margin: 0 0 69px 64px;
     }
   }
   &__photo-preview-img {
@@ -137,6 +149,7 @@
     @media(min-width: $width-tablet){
       display: block;
       font-size: $html-text-size * 1.4;
+      padding-top: 18px;
     }
   }
 
@@ -207,9 +220,21 @@
   &__traveler {
     list-style-type: none;
     position: relative;
-    margin-bottom: 21px;
+    margin-bottom: 16px;
     display: flex;
     flex-wrap: wrap;
+
+    @media(min-width: $width-tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media(min-width: $width-desktop) {
+      margin-bottom: 37px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 9px;
+    }
 
     .field-text {
       margin: 0;
@@ -241,7 +266,7 @@
       content: counter(list);
       counter-increment: list;
       position: absolute;
-      top: 26px;
+      top: 32px;
       left: 0;
       width: 61px;
       background-color: $field-form-color;
@@ -250,17 +275,27 @@
       text-align: center;
       line-height: 58px;
       font-weight: bold;
+      font-size: $html-text-size * 1.8;
     }
   }
 
   &__traveler-list {
     counter-reset: list;
     padding: 0;
-    margin-top: 25px;
+    margin-top: 22px;
+    margin-bottom: 9px;
 
     @media(min-width: $width-tablet) {
       margin-top: 14px;
       margin-bottom: 90px;
+    }
+
+    @media(min-width: $width-desktop) {
+      margin-bottom: 78px;
+    }
+
+    input {
+      margin-top: 0;
     }
   }
 }

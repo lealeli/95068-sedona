@@ -1,14 +1,15 @@
 .paginator {
   display: block;
   vertical-align: middle;
-  padding: 44px 0;
+  padding: 38px 20px;
   font-size: 0;
   border-top: 2px solid #dbdbdb;
   border-bottom: 2px solid #dbdbdb;
-  margin-bottom: 32px;
+  margin-bottom: 17px;
 
   @media(min-width: $width-tablet) {
     border: 0;
+    padding: 38px 0;
   }
 
   &__list {
@@ -26,7 +27,7 @@
     width: 58px;
     height: 58px;
     background-color: $bg-color-main;
-    color: $text-color-secondary;
+    color: $bg-color-base;
     line-height: 58px;
     text-align: center;
     text-decoration: none;

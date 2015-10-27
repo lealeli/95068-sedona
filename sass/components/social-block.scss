@@ -7,4 +7,8 @@
     width: 33%;
     padding-left: 38px;
   }
+
+  @media(min-width: $width-desktop) {
+    padding-left: 42px;
+  }
 }

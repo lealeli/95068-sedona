@@ -4,7 +4,7 @@
   line-height: 57px;
   height: 57px;
   background-color: $bg-color-main;
-  color: $text-color-secondary;
+  color: $bg-color-base;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
@@ -35,8 +35,8 @@
   }
 
   &--feedback {
-    margin: 0 0 116px 0;
-    width: 100%;
+    margin: 0 20px 116px 20px;
+    width: 280px;
 
     &:focus {
       outline: none;
@@ -44,7 +44,11 @@
 
     @media(min-width: $width-tablet) {
       width: 458px;
-      margin: 30px auto 120px auto;
+      margin: 27px auto 140px auto;
+    }
+
+    @media(min-width: $width-desktop) {
+      margin: 27px auto 0 auto;
     }
   }
 

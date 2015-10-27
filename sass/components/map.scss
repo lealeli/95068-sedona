@@ -1,13 +1,13 @@
 .map {
   width: 100%;
+  margin: 0 auto 36px auto;
   height: 350px;
-  margin-bottom: 36px;
 
   @media(min-width: $width-tablet) {
     margin-bottom: 33px;
   }
 
-  @media(min-width: $width-tablet) {
-    margin-bottom: 35px;
+  @media(min-width: $width-desktop) {
+    margin-bottom: 0;
   }
 }
