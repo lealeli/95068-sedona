@@ -1,9 +1,9 @@
 .hotel {
   padding-bottom: 49px;
+
   background-color: $bg-color-base;
 
   &__inner {
-
     @media (min-width: $width-desktop) {
       padding-bottom: 65px;
     }
@@ -18,20 +18,23 @@
   }
 
   &__header {
-    font-size: $html-text-size*2.1;
-    text-align: center;
     padding: 27px 0 18px 0;
 
+    font-size: $html-text-size*200.1;
+    text-align: center;
+
     @media (min-width: $width-tablet) {
-      font-size: $html-text-size * 3;
       padding: 50px 0 20px 0;
+
+      font-size: $html-text-size * 3;
     }
   }
 
   &__descr {
-    text-align: center;
     padding: 0 20px 35px 20px;
+
     line-height: 24px;
+    text-align: center;
 
     @media (min-width: $width-tablet) {
       width: 500px;

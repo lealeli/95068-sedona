@@ -1,8 +1,10 @@
 .blog-data {
   display: inline-block;
-  vertical-align: middle;
-  background: url("../img/icon-data.png") no-repeat 0 center;
-  padding: 0 30px 0 20px;
   margin-left: 3px;
+  padding: 0 30px 0 20px;
+
+  vertical-align: middle;
   color: #999999;
+
+  background: url("../img/icon-data.png") no-repeat 0 center;
 }

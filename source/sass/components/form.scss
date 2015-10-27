@@ -1,5 +1,6 @@
 .form {
   padding: 0;
+
   background-color: $bg-color-base;
 
   @media (min-width: $width-tablet) {
@@ -12,10 +13,12 @@
 
   &__fieldset {
     position: relative;
-    border: 0;
-    border-top: 1px solid #9ac2db;
+
     margin: 0;
     padding: 0 20px;
+
+    border: 0;
+    border-top: 1px solid #9ac2db;
 
     @media (min-width: $width-tablet) {
       padding: 0;
@@ -25,29 +28,34 @@
   &__fieldset legend {
     position: absolute;
     top: 21px;
-    line-height: 24px;
+
     width: 280px;
-    font-size: $html-text-size * 1.8;
-    text-align: center;
-    font-weight: bold;
     margin: 0 auto;
 
-    @media (min-width: $width-tablet){
+    font-weight: bold;
+    font-size: $html-text-size * 1.8;
+    line-height: 24px;
+    text-align: center;
+
+    @media (min-width: $width-tablet) {
+      top: -15px;
+      left: 50%;
+
+      width: 400px;
+      margin-left: -200px;
+
       font-size: 21px;
       line-height: 26px;
-      width: 400px;
-      top: -15px;
+
       background: #ffffff;
-      left: 50%;
-      margin-left: -200px;
     }
   }
 
 
   &__fieldset-inner {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: 68px 0 8px 0;
 
     @media (min-width: $width-tablet) {
@@ -80,8 +88,8 @@
     padding-top: 86px;
 
     @media (min-width: $width-tablet) {
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       padding-top: 67px;
       padding-bottom: 42px;
     }
@@ -94,10 +102,11 @@
   }
 
   &__required {
-    color: $required-color;
     margin-right: 15px;
 
-    @media (min-width: $width-desktop){
+    color: $required-color;
+
+    @media (min-width: $width-desktop) {
       margin: 0;
     }
   }
@@ -105,54 +114,58 @@
   &__photo-previews {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -35px;
     margin-bottom: 13px;
+    margin-left: -35px;
 
-    @media(min-width: $width-tablet){
+    @media(min-width: $width-tablet) {
       margin: 0 auto;
     }
 
-    @media (min-width: $width-desktop){
+    @media (min-width: $width-desktop) {
       margin: 0 0 0 -65px;
     }
   }
 
   &__photo-preview {
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0 35px 35px;
-    font-size: 0;
 
-    @media (min-width: $width-tablet){
+    display: inline-block;
+    margin: 0 0 35px 35px;
+
+    font-size: 0;
+    vertical-align: middle;
+
+    @media (min-width: $width-tablet) {
       margin: 0 30px 69px 35px;
     }
 
-    @media (min-width: $width-tablet){
+    @media (min-width: $width-tablet) {
       margin: 0 0 69px 64px;
     }
   }
   &__photo-preview-img {
-    height: 70px;
-    width: 70px;
     display: block;
+    width: 70px;
+    height: 70px;
+
     background-size: cover;
 
     @media (min-width: $width-tablet) {
-      height: 140px;
       width: 140px;
+      height: 140px;
     }
   }
 
   &__photo-preview-descr {
     display: none;
 
-    @media (min-width: $width-tablet){
+    @media (min-width: $width-tablet) {
       display: block;
       width: 140px;
-      word-break: break-all;
-      font-size: $html-text-size * 1.4;
       padding-top: 18px;
+
+      font-size: $html-text-size * 1.4;
+      word-break: break-all;
     }
   }
 
@@ -160,44 +173,50 @@
     position: absolute;
     top: -15px;
     left: 20px;
-    background-color: $field-form-color;
+
     width: 30px;
     height: 30px;
+
+    background-color: $field-form-color;
     border-radius: 50%;
 
-    &:hover{
+    &:hover {
       background-color: $color-disabled;
     }
 
-    &:active{
+    &:active {
       background-color: $color-checked;
     }
 
-    @media (min-width: $width-tablet){
-      width: 60px;
-      height: 60px;
+    @media (min-width: $width-tablet) {
       top: -30px;
       left: 110px;
+
+      width: 60px;
+      height: 60px;
     }
 
     &:before,
     &:after {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 8px;
+
       width: 14px;
       height: 2px;
-      border-radius: 2px;
-      background: #333333;
-      opacity: 0.3;
-      position: absolute;
-      left: 8px;
-      top: 13px;
-      content: '';
-      transform-origin: 50% 50%;
 
-      @media (min-width: $width-tablet){
+      background: #333333;
+      border-radius: 2px;
+      transform-origin: 50% 50%;
+      opacity: 0.3;
+
+      @media (min-width: $width-tablet) {
+        top: 28px;
+        left: 15px;
+
         width: 30px;
         height: 3px;
-        left: 15px;
-        top: 28px;
       }
     }
 
@@ -221,11 +240,13 @@
   }
 
   &__traveler {
-    list-style-type: none;
     position: relative;
-    margin-bottom: 16px;
+
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 16px;
+
+    list-style-type: none;
 
     @media (min-width: $width-tablet) {
       margin-bottom: 30px;
@@ -245,21 +266,21 @@
 
       @media (min-width: $width-tablet) and (max-width: $width-desktop) {
         width: 29%;
-        padding: 0;
         margin-right: 5px;
+        padding: 0;
 
         &:first-of-type {
-          margin-left: 67px;
           width: 29%;
-          padding: 0;
           margin-right: 5px;
+          margin-left: 67px;
+          padding: 0;
         }
 
         &:last-of-type {
-          margin: 0;
           width: 29%;
-          padding: 0;
+          margin: 0;
           margin-right: 5px;
+          padding: 0;
         }
       }
 
@@ -274,12 +295,10 @@
           padding: 0 0 0 40px;
         }
       }
-
-
     }
 
     &:before {
-      content: '№';
+      content: "№";
       position: absolute;
       top: 3px;
       left: 24px;
@@ -287,26 +306,31 @@
 
     &:after {
       content: counter(list);
-      counter-increment: list;
       position: absolute;
       top: 32px;
       left: 0;
+
       width: 61px;
-      background-color: $field-form-color;
       height: 56px;
-      vertical-align: top;
-      text-align: center;
-      line-height: 58px;
+
       font-weight: bold;
       font-size: $html-text-size * 1.8;
+      line-height: 58px;
+      vertical-align: top;
+      text-align: center;
+
+      background-color: $field-form-color;
+
+      counter-increment: list;
     }
   }
 
   &__traveler-list {
-    counter-reset: list;
-    padding: 0;
     margin-top: 22px;
     margin-bottom: 9px;
+    padding: 0;
+
+    counter-reset: list;
 
     @media (min-width: $width-tablet) {
       margin-top: 14px;

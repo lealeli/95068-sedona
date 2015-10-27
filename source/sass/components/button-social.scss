@@ -1,18 +1,21 @@
 .btn-social {
   display: inline-block;
-  vertical-align: middle;
-  line-height: 44px;
   width: 46px;
   height: 48px;
   margin-right: 3px;
+
+  line-height: 44px;
+  vertical-align: middle;
+
   background-color: $bg-color-main;
 
   &:hover {
-    background-color: $bg-color-hover;
     color: $bg-color-main;
+
+    background-color: $bg-color-hover;
   }
 
-  &:active{
+  &:active {
     background-color: $color-active;
   }
 
@@ -22,7 +25,9 @@
 
   & svg {
     display: inline-block;
+
     vertical-align: middle;
+
     fill: #ffffff;
   }
 }

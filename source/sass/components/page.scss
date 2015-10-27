@@ -1,28 +1,30 @@
 html {
   box-sizing: border-box;
+
   font-size: $html-text-size;
+
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-*, :before, :after {
+*,
+:before,
+:after {
   box-sizing: inherit;
 }
 
 body {
-  min-width: 320px;
   width: 100%;
-
-  font-family: $font-family;
-  font-size: $font-size;
-  line-height: 1.5em;
-  font-weight: normal;
-
+  min-width: 320px;
   margin: 0 auto;
 
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: 1.5em;
+  font-family: $font-family;
   color: $text-color-base;
-  background-color: $bg-color-base;
-
   text-transform: uppercase;
+
+  background-color: $bg-color-base;
 
   @media(min-width: $width-desktop) {
     background-color: $field-form-color;
@@ -35,8 +37,8 @@ body {
   @media (min-width: $width-desktop) {
     width: 1200px;
     margin: 0 auto;
-    box-shadow:
-    10px 0 15px -5px rgba(0, 0, 0, 0.15),
+
+    box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.15),
     -10px 0 15px -5px rgba(0, 0, 0, 0.15);
   }
 }
@@ -50,30 +52,30 @@ body {
 }
 
 
-h1, h2 {
-  font-size: $font-size-header;
-  line-height: 1.4em;
-  font-weight: bold;
-
+h1,
+h2 {
   margin: 0;
 
+  font-weight: bold;
+  font-size: $font-size-header;
+  line-height: 1.4em;
   text-transform: uppercase;
 }
 
-p{
-  font-size: $font-size;
-  line-height: 1.5em;
-  font-weight: normal;
-
+p {
   margin: 0;
 
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: 1.5em;
   text-transform: uppercase;
 }
 
 label {
+  display: inline-block;
+  width: 100%;
+
   font-size: $font-size;
   line-height: 26px;
-  width: 100%;
-  display: inline-block;
   vertical-align: middle;
 }

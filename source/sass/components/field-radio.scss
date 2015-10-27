@@ -1,13 +1,15 @@
 .field-radio {
   display: inline-block;
-  cursor: pointer;
-  vertical-align: top;
   padding-bottom: 13px;
 
+  vertical-align: top;
+
+  cursor: pointer;
+
   &:first-of-type {
-  @media (min-width:$width-desktop) {
-    padding-right: 115px;
-  }
+    @media (min-width:$width-desktop) {
+      padding-right: 115px;
+    }
   }
 
   @media (min-width: $width-tablet) {
@@ -15,47 +17,51 @@
   }
 
   span {
-    vertical-align: middle;
-    margin-bottom: 1px;
     display: inline-block;
+    margin-bottom: 1px;
     padding-left: 18px;
-    text-transform: none;
+
     font-size: 18px;
+    vertical-align: middle;
+    text-transform: none;
   }
 
   &:before {
-    content: '';
-    background-color: $field-form-color;
-    height: 56px;
-    width: 56px;
-    border-radius: 50%;
-    border: 17px solid $field-form-color;
+    content: "";
+
     display: inline-block;
-    vertical-align: middle;
+    width: 56px;
+    height: 56px;
+
     line-height: 56px;
+    vertical-align: middle;
+
+    background-color: $field-form-color;
+    border: 17px solid $field-form-color;
+    border-radius: 50%;
   }
 
   &:hover:before {
-    border-color: $color-disabled;
     background-color: $color-disabled;
+    border-color: $color-disabled;
   }
 
-  &:active:before{
+  &:active:before {
     background-color: $color-checked;
     border-color: $color-checked;
   }
 
-  input[type="radio"]:checked+&:before{
-    content: '';
+  input[type="radio"]:checked + &:before {
+    content: "";
+
     background-color: $text-color-base;
   }
 
-  input[type="radio"]:checked+&:hover:before {
+  input[type="radio"]:checked + &:hover:before {
     border-color: $color-disabled;
-
   }
 
-  input[type="radio"]:checked+&:active:before{
+  input[type="radio"]:checked + &:active:before {
     background-color: rgba(0, 0, 0, 0.3);
     border-color: rgba(213, 213, 213, 1);
   }

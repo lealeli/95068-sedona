@@ -2,15 +2,18 @@
   text-align: center;
 
   &__img {
+    position: relative;
+
     width: 100%;
     height: 158px;
+    margin: -14px 0 74px 0;
+    overflow: hidden;
+
+    font-size: 0;
+    text-align: center;
+
     background: #ffffff url("../img/bg-inner.jpg") no-repeat 50% top;
     background-size: auto 158px;
-    margin: -14px 0 74px 0;
-    text-align: center;
-    overflow: hidden;
-    font-size: 0;
-    position: relative;
 
     &--blog {
       margin-bottom: 46px;
@@ -26,35 +29,40 @@
     }
 
     @media (min-width: $width-tablet) {
+      height: 290px;
+
       background: #ffffff url("../img/bg-inner-desktop.jpg") no-repeat 50% top;
       background-size: auto 290px;
-      height: 290px;
     }
 
     @media (min-width: $width-desktop) {
-      background: #ffffff url("../img/bg-inner-desktop.jpg") no-repeat 50% top;
-      background-size: auto 300px;
       height: 300px;
       margin-bottom: 112px;
+
+      background: #ffffff url("../img/bg-inner-desktop.jpg") no-repeat 50% top;
+      background-size: auto 300px;
     }
 
     @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-tablet),
-  (min-resolution: 144dpi) and (min-width: $width-tablet) {
+    (min-resolution: 144dpi) and (min-width: $width-tablet) {
       background-image: url("../img/bg-inner-desktop-2x.jpg");
     }
   }
 
   &__img-sedona {
-    background: transparent url("../img/text-sedona.svg") no-repeat 50% 100%;
-    margin-top: 49px;
-    height: 30px;
-    width: 100%;
     position: absolute;
 
+    width: 100%;
+    height: 30px;
+    margin-top: 49px;
+
+    background: transparent url("../img/text-sedona.svg") no-repeat 50% 100%;
+
     @media (min-width: $width-tablet) {
-      background: transparent url("../img/text-sedona.svg") no-repeat 50% 100%;
       height: 78px;
       margin-top: 103px;
+
+      background: transparent url("../img/text-sedona.svg") no-repeat 50% 100%;
     }
 
     @media (min-width: $width-desktop) {
@@ -63,36 +71,42 @@
   }
 
   &__img-triangle {
-    background: transparent url("../img/intro-triangle.svg") no-repeat 50% 100%;
-    background-size: contain;
-    height: 37px;
     position: absolute;
     bottom: 0;
-    width: 768px;
     left: 50%;
+
+    width: 768px;
+    height: 37px;
     margin-left: -384px;
 
+    background: transparent url("../img/intro-triangle.svg") no-repeat 50% 100%;
+    background-size: contain;
+
     @media (min-width: $width-tablet) {
+      left: 0;
+
+      width: 100%;
+      height: inherit;
+      margin-left: 0;
+
       background: transparent url("../img/intro-triangle.svg") no-repeat 50% 100%;
       background-size: contain;
-      height: inherit;
-      width: 100%;
-      left: 0;
-      margin-left: 0;
     }
 
     @media (min-width: $width-desktop) {
+      height: 57px;
+
       background: transparent url("../img/intro-triangle.svg") no-repeat 50% 100%;
       background-size: contain;
-      height: 57px;
     }
   }
 
   &__title {
-    padding: 0 20px;
-    line-height: 26px;
     margin-bottom: 30px;
+    padding: 0 20px;
+
     font-size: $html-text-size * 1.8;
+    line-height: 26px;
 
     @media (min-width: $width-tablet) {
       font-size: $html-text-size * 3;
@@ -104,9 +118,10 @@
   }
 
   &__descr {
-    line-height: 24px;
-    padding: 0 20px;
     margin-bottom: 16px;
+    padding: 0 20px;
+
+    line-height: 24px;
 
     &--blog {
       margin-bottom: 33px;

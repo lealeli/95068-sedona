@@ -1,19 +1,23 @@
 .modal {
-  display: none;
   position: fixed;
   top: 100px;
+  z-index: 10;
+
+  display: none;
   width: 100%;
   height: auto;
-  z-index: 10;
-  background-color: $bg-color-base;
+  padding-top: 42px;
+
   text-align: center;
   text-transform: uppercase;
-  padding-top: 42px;
+
+  background-color: $bg-color-base;
   box-shadow: 0 7px 15px 0 rgba(0,0,0,0.15);
 
   @media(min-width: $width-tablet) {
-    width: 400px;
     left: 50%;
+
+    width: 400px;
     margin-left: -200px;
   }
 
@@ -23,14 +27,16 @@
 
   &__title {
     display: inline-block;
-    vertical-align: middle;
     margin-bottom: 30px;
+
     font-size: $html-text-size * 1.8;
     line-height: 26px;
+    vertical-align: middle;
   }
 
   &__descr {
     margin-bottom: 24px;
+
     line-height: 24px;
   }
 

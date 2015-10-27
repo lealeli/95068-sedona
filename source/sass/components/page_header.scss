@@ -1,23 +1,26 @@
 .page-header {
   position: relative;
+
   width: 100%;
 
   @media (min-width: $width-desktop) {
     background-color: $field-form-color;
   }
 
-  &__inner {
-  }
+
 
   &__logo-link {
-    display: block;
-    text-align: center;
-    height: 70px;
     position: relative;
     z-index: 9;
+
+    display: block;
     width: 138px;
+    height: 70px;
     margin: 0 auto;
-    background: url('../img/form-logo-triangle.svg') no-repeat 0 0;
+
+    text-align: center;
+
+    background: url("../img/form-logo-triangle.svg") no-repeat 0 0;
 
     @media (min-width: $width-tablet) {
       margin-top: -56px;

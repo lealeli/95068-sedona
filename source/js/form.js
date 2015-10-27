@@ -6,7 +6,7 @@
   }
 
   function getDataAttribute(node, name) {
-    if(node.dataset !== undefined) {
+    if (node.dataset !== undefined) {
       return node.dataset[name];
     } else {
       return node.getAttribute('data-' + name);

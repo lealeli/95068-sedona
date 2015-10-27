@@ -1,17 +1,20 @@
 .post-paginator {
-  padding: 45px 20px;
-  font-size: 0;
-  border-top: 2px solid #dbdbdb;
-  border-bottom: 2px solid #dbdbdb;
-  margin-bottom: 52px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 52px;
+  padding: 45px 20px;
+
+  font-size: 0;
+
+  border-top: 2px solid #dbdbdb;
+  border-bottom: 2px solid #dbdbdb;
 
   @media (min-width: $width-tablet) {
-    border: 0;
-    padding: 45px 47px;
     flex-wrap: nowrap;
     justify-content: space-between;
+    padding: 45px 47px;
+
+    border: 0;
   }
 
   @media (min-width: $width-desktop) {
@@ -20,18 +23,20 @@
 
   &__item {
     display: inline-block;
-    vertical-align: middle;
     width: 47%;
     height: 58px;
-    background-color: $bg-color-base;
-    color: $text-color-base;
-    border: 2px solid $bg-color-main;
-    line-height: 58px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
     margin: 0 0 20px 0;
+
+    font-weight: bold;
     font-size: $html-text-size * 2.1;
+    line-height: 58px;
+    vertical-align: middle;
+    text-align: center;
+    color: $text-color-base;
+    text-decoration: none;
+
+    background-color: $bg-color-base;
+    border: 2px solid $bg-color-main;
 
     &--show-tablet {
       display: none;
@@ -39,39 +44,38 @@
       @media (min-width: $width-tablet) {
         display: inline-block;
       }
-
     }
 
     &:hover {
+      color: $bg-color-base;
+
       background-color: $bg-color-hover;
       border: 2px solid $bg-color-hover;
-      color: $bg-color-base;
     }
 
-    &:active{
+    &:active {
+      color: #94b9d2;
+
       background-color: $color-active;
       border: 2px solid $color-active;
-      color: #94b9d2;
     }
 
     &:nth-child(1) {
       margin-right: 6%;
 
       @media (min-width: $width-tablet) {
-        margin-right: 0;
         order: 1;
+        margin-right: 0;
       }
     }
 
     &:nth-child(2) {
-
       @media (min-width: $width-tablet) {
         order: 3;
       }
     }
 
     &:nth-child(3) {
-
       @media (min-width: $width-tablet) {
         order: 2;
       }

@@ -1,19 +1,23 @@
 .paginator {
   display: block;
-  vertical-align: middle;
+  margin-bottom: 17px;
   padding: 38px 20px;
+
   font-size: 0;
+  vertical-align: middle;
+
   border-top: 2px solid #dbdbdb;
   border-bottom: 2px solid #dbdbdb;
-  margin-bottom: 17px;
 
   @media (min-width: $width-tablet) {
-    border: 0;
     padding: 38px 0;
+
+    border: 0;
   }
 
   &__list {
     display: inline-block;
+
     vertical-align: middle;
 
     @media (min-width: $width-desktop) {
@@ -23,25 +27,29 @@
 
   &__item {
     display: inline-block;
-    vertical-align: middle;
     width: 58px;
     height: 58px;
-    background-color: $bg-color-main;
-    color: $bg-color-base;
-    line-height: 58px;
-    text-align: center;
-    text-decoration: none;
     margin: 0 16px 16px 0;
+
     font-size: $html-text-size * 2.1;
+    line-height: 58px;
+    vertical-align: middle;
+    text-align: center;
+    color: $bg-color-base;
+    text-decoration: none;
+
+    background-color: $bg-color-main;
 
     &:hover {
-      background-color: $bg-color-hover;
       color: $bg-color-base;
+
+      background-color: $bg-color-hover;
     }
 
-    &:active{
-      background-color: $color-active;
+    &:active {
       color: #94b9d2;
+
+      background-color: $color-active;
     }
 
     @media (min-width: $width-tablet) and (max-width: $width-desktop) {
@@ -50,17 +58,20 @@
   }
 
   &__item--active {
-    background-color: #e5e5e5;
     color: $text-color-base;
 
+    background-color: #e5e5e5;
+
     &:hover {
-      background-color: #e5e5e5;
       color: $text-color-base;
+
+      background-color: #e5e5e5;
     }
 
-    &:active{
-      background-color: #e5e5e5;
+    &:active {
       color: $text-color-base;
+
+      background-color: #e5e5e5;
     }
   }
 
@@ -69,20 +80,22 @@
 
     @media (min-width: $width-tablet) and (max-width: $width-desktop) {
       display: inline-block;
-      vertical-align: baseline;
       padding-right: 67px;
       padding-left: 5.5%;
-      font-size: $html-text-size * 2.1;
+
       font-weight: bold;
+      font-size: $html-text-size * 2.1;
+      vertical-align: baseline;
     }
 
     @media (min-width: $width-desktop) {
       display: inline-block;
-      vertical-align: baseline;
-      padding-right: 0;
-      font-size: $html-text-size * 2.1;
-      font-weight: bold;
       width: 33%;
+      padding-right: 0;
+
+      font-weight: bold;
+      font-size: $html-text-size * 2.1;
+      vertical-align: baseline;
       text-align: center;
     }
   }

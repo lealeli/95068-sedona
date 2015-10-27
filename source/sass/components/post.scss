@@ -10,10 +10,11 @@
   }
 
   & h2 {
+    padding: 52px 0 35px 0;
+
     font-size: $html-text-size * 3;
     line-height: 1em;
     text-align: left;
-    padding: 52px 0 35px 0;
   }
   & p {
     text-align: left;
@@ -26,18 +27,21 @@
 
   & li {
     position: relative;
-    list-style-type: none;
+
     padding-left: 17px;
 
+    list-style-type: none;
+
     &:before {
-      content: '';
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+
       width: 7px;
       height: 7px;
-      position: absolute;
-      background-color: $bg-color-main;
-      left: 0;
-      top: 7px;
 
+      background-color: $bg-color-main;
     }
   }
   & a {
@@ -45,13 +49,16 @@
   }
 
   & blockquote {
-    border-left: 2px solid $bg-color-main ;
-    text-align: left;
-    padding: 0 0 0 18px;
     margin: 33px 0 0 0;
+    padding: 0 0 0 18px;
+
+    text-align: left;
+
+    border-left: 2px solid $bg-color-main ;
 
     & cite {
       display: block;
+
       color: #766357;
       text-transform: none;
     }

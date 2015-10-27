@@ -1,24 +1,28 @@
 .btn {
   display: block;
+  height: 57px;
+
+  font-weight: bold;
   font-size: $html-text-size * 2.1;
   line-height: 57px;
-  height: 57px;
-  background-color: $bg-color-main;
-  color: $bg-color-base;
-  font-weight: bold;
-  text-decoration: none;
   text-align: center;
-  border: 0;
+  color: $bg-color-base;
   text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $bg-color-main;
+  border: 0;
 
   &:hover {
-    background-color: $bg-color-hover;
     color: $bg-color-base;
+
+    background-color: $bg-color-hover;
   }
 
-  &:active{
-    background-color: $color-active;
+  &:active {
     color: #94b9d2;
+
+    background-color: $color-active;
   }
 
   &--disabled {
@@ -35,8 +39,8 @@
   }
 
   &--feedback {
-    margin: 0 20px 116px 20px;
     width: 280px;
+    margin: 0 20px 116px 20px;
 
     &:focus {
       outline: none;

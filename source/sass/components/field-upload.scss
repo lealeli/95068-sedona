@@ -1,53 +1,58 @@
 .file_upload {
-  display: block;
   position: relative;
-  overflow: hidden;
-  margin: 61px 0 57px 0;
-  height: 58px;
+
+  display: block;
   width: 280px;
+  height: 58px;
+  margin: 61px 0 57px 0;
+  overflow: hidden;
+
   line-height: 58px;
+
   background-color: $field-form-color;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: $color-disabled;
   }
 
-  &:active{
+  &:active {
     background-color: $color-checked;
   }
 
   &:first-of-type {
-    @media (min-width: $width-tablet){
+    @media (min-width: $width-tablet) {
       width: 458px;
       margin: 70px auto 86px auto;
     }
 
-    @media (min-width: $width-desktop){
+    @media (min-width: $width-desktop) {
       margin: 71px auto 86px auto;
     }
   }
 
   span {
-    color: #c6c6c6;
+    display: block;
+
+    font-weight: bold;
     font-size: $html-text-size * 2.1;
     line-height: 58px;
-    font-weight: bold;
-    display: block;
     text-align: center;
+    color: #c6c6c6;
   }
 
-  &:hover span{
+  &:hover span {
     color: #8c8c8c;
   }
 
-  &:active span{
+  &:active span {
     color: #afafaf;
   }
 
-  input[type=file]{
+  input[type=file] {
     position: absolute;
     top: 0;
+
     opacity: 0;
   }
 }
