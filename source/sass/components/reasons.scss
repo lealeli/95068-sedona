@@ -79,7 +79,7 @@
 
     @media (min-width: $width-tablet) {
       font-size: $html-text-size * 2.1;
-      padding: 45px 51px 10px 51px;
+      padding: 45px 40px 10px 40px;
       line-height: 1.3em;
     }
 
@@ -111,6 +111,7 @@
     width: 100%;
     min-height: 255px;
     background: url('../img/photo-city.jpg') no-repeat 100% 0;
+    background-size: auto 255px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/photo-city-2x.jpg");

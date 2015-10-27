@@ -5,6 +5,7 @@
     width: 100%;
     height: 158px;
     background: #ffffff url("../img/bg-inner.jpg") no-repeat 50% top;
+    background-size: auto 158px;
     margin: -14px 0 74px 0;
     text-align: center;
     overflow: hidden;
@@ -26,11 +27,13 @@
 
     @media (min-width: $width-tablet) {
       background: #ffffff url("../img/bg-inner-desktop.jpg") no-repeat 50% top;
+      background-size: auto 290px;
       height: 290px;
     }
 
     @media (min-width: $width-desktop) {
       background: #ffffff url("../img/bg-inner-desktop.jpg") no-repeat 50% top;
+      background-size: auto 300px;
       height: 300px;
       margin-bottom: 112px;
     }
