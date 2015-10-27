@@ -35,7 +35,7 @@
     &--text {
       position: absolute;
       right: 24px;
-      top: 15px;
+      top: 16px;
       font-size: $html-text-size * 1.8;
       text-transform: none;
       color: rgba(0, 0, 0, 0.3);
@@ -99,13 +99,13 @@
   &--center {
 
     &:first-of-type {
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         width: 33%;
         padding: 0 20px 0 20px;
         margin: 0 auto;
       }
 
-      @media(min-width: $width-desktop) {
+      @media (min-width: $width-desktop) {
         padding: 0 30px 0 0;
         margin: 0;
       }

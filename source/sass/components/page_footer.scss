@@ -7,14 +7,14 @@
     flex-direction: column;
     padding-bottom: 32px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       flex-direction: row;
       align-items: center;
       margin: 0 37px 0 10px;
       padding-bottom: 38px;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       padding: 0 0 23px 0;
       margin-bottom: 0;
     }
@@ -31,7 +31,7 @@
     font-weight: bold;
     margin-bottom: 36px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       margin-bottom: 0;
       width: 33%;
     }
@@ -65,7 +65,7 @@
       fill: #b2b2b2;
     }
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 33%;
       text-align: right;
       padding: 0;

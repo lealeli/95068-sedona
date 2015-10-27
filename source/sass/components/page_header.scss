@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
 
-  @media(min-width: $width-desktop) {
+  @media (min-width: $width-desktop) {
     background-color: $field-form-color;
   }
 
@@ -19,7 +19,7 @@
     margin: 0 auto;
     background: url('../img/form-logo-triangle.svg') no-repeat 0 0;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       margin-top: -56px;
     }
   }

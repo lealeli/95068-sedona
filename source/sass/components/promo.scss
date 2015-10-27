@@ -9,7 +9,7 @@
       background: $bg-color-main url("../img/triangle.png") no-repeat 50% top;
       display: block;
 
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         display: none;
       }
     }
@@ -30,23 +30,23 @@
       background-image: url("../img/bg-index-2x.jpg");
     }
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       background: #ffffff url("../img/bg-index-tablet.jpg") no-repeat 50% top;
       height: 512px;
       margin-bottom: 53px;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       background: #ffffff url("../img/bg-index-desktop.jpg") no-repeat 50% top;
       height: 509px;
     }
 
-    @media(-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-tablet),
+    @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-tablet),
     (min-resolution: 144dpi) and (min-width: $width-tablet) {
       background-image: url("../img/bg-index-tablet-2x.jpg");
     }
 
-    @media(-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-desktop),
+    @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-desktop),
     (min-resolution: 144dpi) and (min-width: $width-desktop) {
       background-image: url("../img/bg-index-desktop-2x.jpg");
     }
@@ -59,13 +59,13 @@
     position: absolute;
     width: 100%;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       background: transparent url("../img/logo-sedona.svg") no-repeat 50% 100%;
       height: 352px;
       margin-top: 76px;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       background: transparent url("../img/logo-sedona.svg") no-repeat 50% 100%;
     }
   }
@@ -80,7 +80,7 @@
     left: 50%;
     margin-left: -384px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       background: transparent url("../img/intro-triangle.svg") no-repeat 50% 100%;
       background-size: contain;
       height: inherit;
@@ -89,7 +89,7 @@
       margin-left: 0;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       background: transparent url("../img/intro-triangle.svg") no-repeat 50% 100%;
       background-size: contain;
       height: 57px;
@@ -100,7 +100,7 @@
     text-align: center;
     margin-bottom: 4px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       margin-bottom: 49px;
     }
   }
@@ -109,13 +109,13 @@
     margin-bottom: 33px;
     padding: 0 30px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 500px;
       font-size: 2.1rem;
       margin: 27px auto 27px auto;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       margin: 55px auto 30px auto;
     }
   }

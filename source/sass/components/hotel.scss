@@ -4,16 +4,16 @@
 
   &__inner {
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       padding-bottom: 65px;
     }
   }
 
-  @media(min-width: $width-tablet) {
+  @media (min-width: $width-tablet) {
     padding-bottom: 60px;
   }
 
-  @media(min-width: $width-desktop) {
+  @media (min-width: $width-desktop) {
     padding-bottom: 0;
   }
 
@@ -22,7 +22,7 @@
     text-align: center;
     padding: 27px 0 18px 0;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       font-size: $html-text-size * 3;
       padding: 50px 0 20px 0;
     }
@@ -33,12 +33,12 @@
     padding: 0 20px 35px 20px;
     line-height: 24px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 500px;
       margin: 0 auto;
       padding-bottom: 46px;
     }
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       margin: 0 auto;
       padding-bottom: 49px;
     }

@@ -18,12 +18,12 @@
   }
 
   &:first-of-type {
-    @media(min-width: $width-tablet){
+    @media (min-width: $width-tablet){
       width: 458px;
       margin: 70px auto 86px auto;
     }
 
-    @media(min-width: $width-desktop){
+    @media (min-width: $width-desktop){
       margin: 71px auto 86px auto;
     }
   }

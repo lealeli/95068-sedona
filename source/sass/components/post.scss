@@ -1,11 +1,11 @@
 .post {
   padding: 35px 20px 40px 20px;
 
-  @media(min-width: $width-tablet) {
+  @media (min-width: $width-tablet) {
     padding: 35px 47px 40px 47px;
   }
 
-  @media(min-width: $width-desktop) {
+  @media (min-width: $width-desktop) {
     padding: 35px 200px 40px 200px;
   }
 

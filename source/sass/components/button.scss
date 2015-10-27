@@ -28,7 +28,7 @@
   &--hotel {
     margin: 0 20px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 458px;
       margin: 0 auto;
     }
@@ -42,12 +42,12 @@
       outline: none;
     }
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 458px;
       margin: 27px auto 140px auto;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       margin: 27px auto 105px auto;
     }
   }

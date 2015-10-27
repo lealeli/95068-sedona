@@ -1,5 +1,5 @@
 .reasons {
-  @media(min-width: $width-tablet) {
+  @media (min-width: $width-tablet) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -9,7 +9,7 @@
     background-color: $bg-color-secondary;
     color: $text-color-base;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       padding: 0;
       display: inline-flex;
       width: 33%;
@@ -23,7 +23,7 @@
       text-align: center;
       padding: 0 45px 40px 45px;
 
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         padding: 0 35px 10px 35px;
       }
     }
@@ -33,14 +33,14 @@
       background-color: $bg-color-main;
       color: $bg-color-base;
 
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         padding: 0;
         width: 100%;
       }
     }
 
     &:first-child {
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         padding: 0;
         height: 100%;
       }
@@ -48,27 +48,27 @@
 
     &:nth-child(2) {
 
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         flex-direction: row-reverse;
       }
     }
   }
 
   &__item-text {
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 100%;
       display: block;
     }
   }
 
   &__item--bg-blue &__item-text {
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 33%;
     }
   }
 
   &__item--bg-blue &__item-header {
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       padding: 50px 110px 10px 110px;
     }
   }
@@ -77,13 +77,13 @@
     text-align: center;
     padding-bottom: 10px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       font-size: $html-text-size * 2.1;
       padding: 45px 51px 10px 51px;
       line-height: 1.3em;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       padding: 46px 120px 10px 120px;
       line-height: 26px;
     }
@@ -93,7 +93,7 @@
     text-align: center;
     padding-bottom: 15px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       padding-bottom: 22px;
     }
   }
@@ -102,7 +102,7 @@
     text-align: center;
     padding: 0 10px 26px 10px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       padding: 0 49px 26px 49px;
     }
   }
@@ -116,7 +116,7 @@
       background-image: url("../img/photo-city-2x.jpg");
     }
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 67%;
       display: block;
       text-align: right;
@@ -131,7 +131,7 @@
     }
 
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       width: 67%;
       text-align: left;
     }
@@ -142,7 +142,7 @@
     background-color: $bg-color-base;
     color: $text-color-base;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       padding: 58px 0 0 0;
       min-height: 330px;
       display: flex;
@@ -151,7 +151,7 @@
   }
 
   &__fact-item {
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       padding: 90px 30px 0 30px;
       display: inline-block;
       vertical-align: middle;
@@ -164,7 +164,7 @@
       background: $bg-color-base url('../img/icon-house.svg') no-repeat 0 0;
       background-size: 37px, 37px;
 
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         background: $bg-color-base url('../img/icon-house.svg') no-repeat top center;
         background-size: 74px, 74px;
         order: 1;
@@ -175,7 +175,7 @@
       background: $bg-color-base url('../img/icon-gift.svg') no-repeat 0 0;
       background-size: 37px, 37px;
 
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         background: $bg-color-base url('../img/icon-gift.svg') no-repeat  top center;
         background-size: 74px, 74px;
         order: 2;
@@ -186,7 +186,7 @@
       background: #ffffff url("../img/icon-burger.svg") no-repeat -2px 5px;
       background-size: 37px, 37px;
 
-      @media(min-width: $width-tablet) {
+      @media (min-width: $width-tablet) {
         background: $bg-color-base url('../img/icon-burger.svg') no-repeat  top center;
         background-size: 74px, 74px;
         order: 1;
@@ -200,7 +200,7 @@
     font-size: $font-size-header;
     line-height: 45px;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       padding: 0;
       font-size: $html-text-size * 2.1;
     }
@@ -210,7 +210,7 @@
     padding: 4px 25px 18px 48px;
     line-height: 1.5em;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       padding: 0 14px 0 14px;
       margin-top: 14px;
     }
@@ -224,7 +224,7 @@
     width: 100%;
     margin: 0 auto;
 
-    @media(min-width: $width-tablet) {
+    @media (min-width: $width-tablet) {
       display: none;
     }
   }

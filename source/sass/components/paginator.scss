@@ -7,7 +7,7 @@
   border-bottom: 2px solid #dbdbdb;
   margin-bottom: 17px;
 
-  @media(min-width: $width-tablet) {
+  @media (min-width: $width-tablet) {
     border: 0;
     padding: 38px 0;
   }
@@ -16,7 +16,7 @@
     display: inline-block;
     vertical-align: middle;
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       width: 33%;
     }
   }
@@ -44,7 +44,7 @@
       color: #94b9d2;
     }
 
-    @media(min-width: $width-tablet) and (max-width: $width-desktop) {
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
       margin: 0 16px 0 0;
     }
   }
@@ -67,7 +67,7 @@
   &__item-title {
     display: none;
 
-    @media(min-width: $width-tablet) and (max-width: $width-desktop) {
+    @media (min-width: $width-tablet) and (max-width: $width-desktop) {
       display: inline-block;
       vertical-align: baseline;
       padding-right: 67px;
@@ -76,7 +76,7 @@
       font-weight: bold;
     }
 
-    @media(min-width: $width-desktop) {
+    @media (min-width: $width-desktop) {
       display: inline-block;
       vertical-align: baseline;
       padding-right: 0;
