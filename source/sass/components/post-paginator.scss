@@ -1,5 +1,5 @@
 .post-paginator {
-  padding: 45px 0;
+  padding: 45px 20px;
   font-size: 0;
   border-top: 2px solid #dbdbdb;
   border-bottom: 2px solid #dbdbdb;
@@ -9,8 +9,13 @@
 
   @media(min-width: $width-tablet) {
     border: 0;
+    padding: 45px 47px;
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+
+  @media(min-width: $width-desktop) {
+    padding: 45px 200px;
   }
 
   &__item {
@@ -28,16 +33,25 @@
     margin: 0 0 20px 0;
     font-size: $html-text-size * 2.1;
 
+    &--show-tablet {
+      display: none;
+
+      @media(min-width: $width-tablet) {
+        display: inline-block;
+      }
+
+    }
+
     &:hover {
       background-color: $bg-color-hover;
+      border: 2px solid $bg-color-hover;
       color: $bg-color-base;
-      border: none;
     }
 
     &:active{
       background-color: $color-active;
+      border: 2px solid $color-active;
       color: #94b9d2;
-      border: none;
     }
 
     &:nth-child(1) {
@@ -45,6 +59,21 @@
 
       @media(min-width: $width-tablet) {
         margin-right: 0;
+        order: 1;
+      }
+    }
+
+    &:nth-child(2) {
+
+      @media(min-width: $width-tablet) {
+        order: 3;
+      }
+    }
+
+    &:nth-child(3) {
+
+      @media(min-width: $width-tablet) {
+        order: 2;
       }
     }
 
