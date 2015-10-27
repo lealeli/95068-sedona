@@ -137,10 +137,15 @@
     }
   }
   &__photo-preview-img {
-    height: 140px;
-    width: 140px;
+    height: 70px;
+    width: 70px;
     display: block;
     background-size: cover;
+
+    @media(min-width: $width-tablet) {
+      height: 140px;
+      width: 140px;
+    }
   }
 
   &__photo-preview-descr {
@@ -236,11 +241,31 @@
       margin-bottom: 9px;
     }
 
-    .field-text {
+    & > .field-text {
       margin: 0;
       padding-left: 67px;
 
-      @media(min-width: $width-tablet) {
+      @media(min-width: $width-tablet) and (max-width: $width-desktop) {
+        width: 29%;
+        padding: 0;
+        margin-right: 5px;
+
+        &:first-of-type {
+          margin-left: 67px;
+          width: 29%;
+          padding: 0;
+          margin-right: 5px;
+        }
+
+        &:last-of-type {
+          margin: 0;
+          width: 29%;
+          padding: 0;
+          margin-right: 5px;
+        }
+      }
+
+      @media(min-width: $width-desktop) {
         padding: 0 20px 0 20px;
 
         &:first-of-type {
