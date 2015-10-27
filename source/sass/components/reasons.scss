@@ -122,10 +122,11 @@
 
     background: url("../img/photo-city-tablet.jpg") no-repeat 100% 0;
     background-size: auto 255px;
+    background-position-x: 50%;
 
     @media (-webkit-min-device-pixel-ratio: 1.5),
     (min-resolution: 144dpi) {
-      background-image: url("../img/photo-city@2x.jpg");
+      background-image: url("../img/photo-city-tablet@2x.jpg");
     }
 
     @media (min-width: $width-desktop) {
@@ -135,6 +136,7 @@
     @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-desktop),
     (min-resolution: 144dpi) and (min-width: $width-desktop) {
       background-image: url("../img/photo-city-2x.jpg");
+      background-size: auto 255px;
     }
 
     @media (min-width: $width-tablet) {
@@ -148,19 +150,22 @@
   &__item:nth-child(2) &__item-photo {
     background: url("../img/photo-bridge-tablet.jpg") no-repeat 0 0;
     background-size: auto 255px;
+    background-position-x: 50%;
 
     @media (-webkit-min-device-pixel-ratio: 1.5),
     (min-resolution: 144dpi) {
-      background-image: url("../img/photo-bridge@2x.jpg");
+      background-image: url("../img/photo-bridge-tablet@2x.jpg");
     }
 
     @media (min-width: $width-desktop) {
       background: url("../img/photo-bridge.jpg") no-repeat 100% 0;
+      background-position-x: 0;
     }
 
     @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: $width-desktop),
     (min-resolution: 144dpi) and (min-width: $width-desktop) {
       background-image: url("../img/photo-bridge-2x.jpg");
+      background-size: auto 255px;
     }
 
 
